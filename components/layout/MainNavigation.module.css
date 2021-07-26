@@ -4,12 +4,27 @@
   background-color: #111;
   color: #fff;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .menu {
+  width: 6rem;
+  padding: 0px;
   display: flex;
   flex-direction: column;
-  padding: 0 10px;
+  align-items: center;
+}
+
+/*menu icon*/
+.menuSlash {
+  width: 61.8%;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px auto;
+}
+
+/* nav logo */
+.logo {
+  width: 15%;
 }

@@ -6,10 +6,11 @@ const NavigationBar = () => {
   return (
     <>
       <nav className={styles.navigation}>
+        <div className={styles.logo}>logo</div>
         <div className={styles.menu}>
-          <span>-</span>
-          <span>-</span>
-          <span>-</span>
+          <div className={styles.menuSlash}></div>
+          <div className={styles.menuSlash}></div>
+          <div className={styles.menuSlash}></div>
         </div>
       </nav>
     </>
