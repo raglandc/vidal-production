@@ -1,0 +1,21 @@
+.button {
+  width: 13rem;
+  height: 5rem;
+  margin: 1.618rem 0;
+
+  border: none;
+  border-radius: 6.18px;
+  box-shadow: 0rem 0.1rem 0.618rem #6b7280;
+  font-size: 1.618rem;
+  color: #fff;
+  background-color: #2563eb;
+}
+
+.button:hover {
+  background-color: #3b82f6;
+  box-shadow: 0rem 0.2rem 0.886rem #6b7280;
+}
+
+.button:active {
+  box-shadow: 0rem 0.06rem 0.618rem #6b7280;
+}
