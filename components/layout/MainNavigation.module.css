@@ -1,0 +1,15 @@
+.navigation {
+  width: 100%;
+  height: 6.18rem;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
