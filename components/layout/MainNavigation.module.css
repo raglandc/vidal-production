@@ -21,10 +21,24 @@
   width: 61.8%;
   height: 3px;
   background-color: #fff;
-  margin: 3px auto;
+  margin: 2px auto;
+  transition: all 0.314s ease-in-out;
+}
+
+/* menu icon animation */
+.menuSlashActive_middle {
+  width: 34%;
+  height: 3px;
+  background-color: #fff;
+  margin: 2px auto;
+  transition: all 0.314s ease-in-out;
 }
 
 /* nav logo */
 .logo {
-  width: 15%;
+  width: 6rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
