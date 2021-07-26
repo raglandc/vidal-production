@@ -1,7 +1,6 @@
-////library imports/////
-import type { AppProps } from "next/app";
-
 import MainNavigation from "./MainNavigation";
+
+///styles///
 import styles from "./Layout.module.css";
 
 type LayoutProps = {

@@ -1,5 +1,7 @@
 //styles
 import styles from "./MainNavigation.module.css";
+
+////// component /////////
 const NavigationBar = () => {
   return (
     <>
