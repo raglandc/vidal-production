@@ -33,12 +33,3 @@
   margin: 2px auto;
   transition: all 0.1618s ease-out;
 }
-
-/* nav logo */
-.logo {
-  width: 6rem;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}

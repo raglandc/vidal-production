@@ -1,3 +1,6 @@
+//components
+import Logo from "../UI/Logo";
+
 //styles
 import { useState } from "react";
 import styles from "./MainNavigation.module.css";
@@ -16,7 +19,7 @@ const NavigationBar = () => {
 
   return (
     <nav className={styles.navigation}>
-      <div className={styles.logo}>logo</div>
+      <Logo />
       <div className={styles.menu} onClick={menuStatusHandler}>
         <div className={styles.menuSlash}></div>
         <div
