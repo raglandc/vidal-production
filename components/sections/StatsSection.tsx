@@ -7,13 +7,20 @@ import styles from "./StatsSection.module.css";
 const stats = [
   {
     id: "stat-1",
-    description: "This is a test of the stats",
-    source: "Me bitches",
+    description:
+      "Nearly 90% of people use the Internet to find local businesses",
+    source: "Nielsen.com",
   },
   {
     id: "stat-2",
-    description: "This is another one of the freat stats",
-    source: "alos me bitch",
+    description:
+      "38% of people will stop engaging with a site if it has an unappealing design.",
+    source: "Sweor.com",
+  },
+  {
+    id: "stat-3",
+    description: "Only 50% of small businesses have a website.",
+    source: "SmartCompany.com",
   },
 ];
 

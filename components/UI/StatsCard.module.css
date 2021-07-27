@@ -1,6 +1,6 @@
 .card {
   width: 100%;
-  height: 21rem;
+  min-height: 18rem;
   border-radius: 0.618rem;
   border: 1px solid rgba(17, 17, 17, 0.322);
   /* box-shadow: 0.0314rem 0.14rem 0.618rem #6b7280; */
@@ -15,13 +15,13 @@
 }
 
 .quote {
-  font-size: 2rem;
+  font-size: 2.618rem;
   color: #111;
 }
 
 .source {
   color: #6b7280;
-  font-size: 1.618rem;
+  font-size: 2rem;
   position: absolute;
   right: 6.18%;
   bottom: 6.18%;
