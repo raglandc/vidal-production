@@ -1,4 +1,5 @@
 import MainNavigation from "./MainNavigation";
+import Footer from "./Footer";
 
 ///styles///
 import styles from "./Layout.module.css";
@@ -12,6 +13,7 @@ function Layout({ children }: LayoutProps) {
     <div>
       <MainNavigation />
       <main className={styles.main}>{children}</main>
+      <Footer />
     </div>
   );
 }

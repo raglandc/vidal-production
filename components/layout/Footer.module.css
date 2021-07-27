@@ -1,0 +1,16 @@
+.footer {
+  width: 100%;
+  min-height: 21vh;
+  margin: 6.18rem 0 0 0;
+  background-color: #111;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy {
+  font-size: 1.618rem;
+}
