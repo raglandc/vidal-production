@@ -1,0 +1,28 @@
+.card {
+  width: 100%;
+  height: 21rem;
+  border-radius: 0.618rem;
+  border: 1px solid rgba(17, 17, 17, 0.322);
+  /* box-shadow: 0.0314rem 0.14rem 0.618rem #6b7280; */
+  margin: 1.618rem auto;
+  padding: 0;
+  text-align: center;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  font-size: 2rem;
+  color: #111;
+}
+
+.source {
+  color: #6b7280;
+  font-size: 1.618rem;
+  position: absolute;
+  right: 6.18%;
+  bottom: 6.18%;
+}
