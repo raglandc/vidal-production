@@ -6,15 +6,18 @@ import styles from "./PerksCard.module.css";
 
 type PerksCardProps = {
   key: string;
-  svgLink: string;
+  svgLink: StaticImageData;
   description: string;
 };
 
 const PerksCard = (props: PerksCardProps) => {
   return (
-    <div>
-      <Image src={props.svgLink} alt="svg image" width={500} height={500} />
-      <p>{props.description}</p>
+    <div className={styles.card}>
+      <Image className={styles.svgClass} src={props.svgLink} alt="svg image" />
+
+      <p className={styles.description}>{props.description}</p>
     </div>
   );
 };
+
+export default PerksCard;
