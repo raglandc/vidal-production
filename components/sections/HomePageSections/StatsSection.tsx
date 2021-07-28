@@ -27,7 +27,7 @@ const stats = [
 const StatsSection = () => {
   return (
     <SectionWrapper>
-      <h2 className={styles.statsHeader}>Stats</h2>
+      <h2 className={styles.statsHeader}>Stats.</h2>
       {stats.map((stat) => {
         return (
           <StatsCard

@@ -1,11 +1,10 @@
 .card {
   width: 100%;
-  min-height: 18rem;
-  max-height: 34%;
-  border-radius: 0.618rem;
+  min-height: 21rem;
+  border-radius: 1.618rem;
   border: 1px solid rgba(17, 17, 17, 0.322);
   margin: 1.618rem auto;
-  padding: 0;
+  padding: 0 3rem;
   text-align: center;
 
   position: relative;
