@@ -5,7 +5,7 @@ import styles from "./BannerSection.module.css";
 
 const BannerSection = () => {
   return (
-    <SectionWrapper>
+    <div className={styles.container}>
       <div className={styles.titleWrapper}>
         <h1 className={styles.title}> Vidal </h1>
         <h1 className={styles.title}> Software </h1>
@@ -18,7 +18,7 @@ const BannerSection = () => {
         <p className={styles.p__text}>Meet Vidal.</p>
       </div>
       <Button />
-    </SectionWrapper>
+    </div>
   );
 };
 

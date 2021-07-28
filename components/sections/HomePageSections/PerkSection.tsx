@@ -3,9 +3,7 @@ import PerksCard from "../../sectionComponents/PerksCard";
 import fast from "../../../public/fast.svg";
 import seo from "../../../public/seo.svg";
 import responsive from "../../../public/responsive.svg";
-
-//styles
-import styles from "./PerkSection.module.css";
+import SectionWrapper from "../../UI/SectionWrapper";
 
 const cards: { key: string; svgLink: StaticImageData; description: string }[] =
   [
@@ -31,7 +29,7 @@ const cards: { key: string; svgLink: StaticImageData; description: string }[] =
 
 const PerkSection = () => {
   return (
-    <div className={styles.card}>
+    <SectionWrapper>
       {cards.map((card) => {
         return (
           <PerksCard
@@ -41,7 +39,7 @@ const PerkSection = () => {
           />
         );
       })}
-    </div>
+    </SectionWrapper>
   );
 };
 
