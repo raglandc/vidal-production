@@ -1,9 +1,9 @@
 .card {
   width: 100%;
   min-height: 18rem;
+  max-height: 34%;
   border-radius: 0.618rem;
   border: 1px solid rgba(17, 17, 17, 0.322);
-  /* box-shadow: 0.0314rem 0.14rem 0.618rem #6b7280; */
   margin: 1.618rem auto;
   padding: 0;
   text-align: center;

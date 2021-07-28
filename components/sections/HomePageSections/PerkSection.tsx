@@ -14,7 +14,7 @@ const cards: { key: string; svgLink: StaticImageData; description: string }[] =
       key: "card-1",
       svgLink: fast,
       description:
-        "No one wants to wait for a website to load. Vidal uses technology that is blazing fast. Which means happy customers for you! Yay! ",
+        "No one wants to wait for a websites to load. Vidal uses technology that is blazing fast. Which means happy customers for you! Yay! ",
     },
     {
       key: "card-2",
