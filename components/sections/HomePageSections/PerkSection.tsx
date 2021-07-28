@@ -1,5 +1,4 @@
 //components
-import SectionWrapper from "../../UI/SectionWrapper";
 import PerksCard from "../../sectionComponents/PerksCard";
 import fast from "../../../public/fast.svg";
 import seo from "../../../public/seo.svg";
@@ -32,7 +31,7 @@ const cards: { key: string; svgLink: StaticImageData; description: string }[] =
 
 const PerkSection = () => {
   return (
-    <SectionWrapper>
+    <div className={styles.card}>
       {cards.map((card) => {
         return (
           <PerksCard
@@ -42,7 +41,7 @@ const PerkSection = () => {
           />
         );
       })}
-    </SectionWrapper>
+    </div>
   );
 };
 

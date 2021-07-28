@@ -13,7 +13,9 @@ type PerksCardProps = {
 const PerksCard = (props: PerksCardProps) => {
   return (
     <div className={styles.card}>
-      <Image className={styles.svgClass} src={props.svgLink} alt="svg image" />
+      <div className={styles.svgClass}>
+        <Image src={props.svgLink} alt="svg image" />
+      </div>
 
       <p className={styles.description}>{props.description}</p>
     </div>

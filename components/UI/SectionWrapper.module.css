@@ -1,7 +1,6 @@
 .sectionWrapper {
   height: 95vh;
   width: 100%;
-  margin: 6rem 1.618rem 6rem 1.618rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
