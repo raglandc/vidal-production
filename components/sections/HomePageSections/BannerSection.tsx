@@ -1,5 +1,5 @@
-import Button from "../UI/Button";
-import SectionWrapper from "../UI/SectionWrapper";
+import Button from "../../UI/Button";
+import SectionWrapper from "../../UI/SectionWrapper";
 //styles
 import styles from "./BannerSection.module.css";
 

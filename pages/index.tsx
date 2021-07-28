@@ -1,6 +1,6 @@
 ///components////
-import BannerSection from "../components/sections/BannerSection";
-import StatsSection from "../components/sections/StatsSection";
+import BannerSection from "../components/sections/HomePageSections/BannerSection";
+import StatsSection from "../components/sections/HomePageSections/StatsSection";
 
 ///styles////
 
