@@ -1,5 +1,5 @@
 //components
-import Logo from "../UI/Logo";
+import Logo from "../sectionComponents/Logo";
 
 //styles
 import { useState } from "react";
