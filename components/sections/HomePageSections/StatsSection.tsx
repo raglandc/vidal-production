@@ -26,18 +26,20 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <SectionWrapper>
+    <>
       <h2 className={styles.statsHeader}>Stats.</h2>
-      {stats.map((stat) => {
-        return (
-          <StatsCard
-            key={stat.id}
-            description={stat.description}
-            source={stat.source}
-          />
-        );
-      })}
-    </SectionWrapper>
+      <SectionWrapper>
+        {stats.map((stat) => {
+          return (
+            <StatsCard
+              key={stat.id}
+              description={stat.description}
+              source={stat.source}
+            />
+          );
+        })}
+      </SectionWrapper>
+    </>
   );
 };
 
