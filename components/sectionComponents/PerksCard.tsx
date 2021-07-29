@@ -8,6 +8,7 @@ type PerksCardProps = {
   key: string;
   svgLink: StaticImageData;
   description: string;
+  title: string;
 };
 
 const PerksCard = (props: PerksCardProps) => {
@@ -16,7 +17,7 @@ const PerksCard = (props: PerksCardProps) => {
       <div className={styles.svgClass}>
         <Image src={props.svgLink} alt="svg image" />
       </div>
-
+      <h4 className={styles.title}>{props.title}</h4>
       <p className={styles.description}>{props.description}</p>
     </div>
   );

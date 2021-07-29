@@ -12,6 +12,11 @@
   color: #111;
 }
 
+.title {
+  margin-bottom: 0;
+  font-size: 3rem;
+}
+
 .description {
   color: grey;
   font-size: 2rem;
