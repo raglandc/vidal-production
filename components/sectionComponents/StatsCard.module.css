@@ -25,3 +25,10 @@
   right: 6.18%;
   bottom: 6.18%;
 }
+
+@media only screen and (min-width: 900px) {
+  .card {
+    border: none;
+    padding: 0 1rem;
+  }
+}
