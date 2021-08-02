@@ -1,5 +1,7 @@
+//library imports
+
+//components
 import Button from "../../UI/Button";
-import SectionWrapper from "../../UI/SectionWrapper";
 //styles
 import styles from "./BannerSection.module.css";
 

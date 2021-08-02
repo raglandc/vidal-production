@@ -8,7 +8,7 @@ const stats = [
   {
     id: "stat-1",
     description:
-      "Nearly 90% of people use the Internet to find local businesses",
+      "Nearly 90% of people use the Internet to find local businesses.",
     source: "Nielsen.com",
   },
   {

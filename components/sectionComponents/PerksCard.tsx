@@ -1,6 +1,7 @@
 //libaray imports
+import { useRef } from "react";
 import Image from "next/image";
-
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 //styles
 import styles from "./PerksCard.module.css";
 
@@ -12,8 +13,12 @@ type PerksCardProps = {
 };
 
 const PerksCard = (props: PerksCardProps) => {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const entry = useIntersectionObserver(ref, {});
+  const isVisible = !!entry?.isIntersecting;
+
   return (
-    <div className={styles.card}>
+    <div ref={ref} className={isVisible ? styles.card : styles.start}>
       <div className={styles.svgClass}>
         <Image src={props.svgLink} alt="svg image" />
       </div>

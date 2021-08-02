@@ -26,7 +26,7 @@ const cards: {
     title: "SEO",
   },
   {
-    key: "card-1",
+    key: "card-3",
     svgLink: responsive,
     description:
       "More people use their phone to surf the web than ever, having a website that works on devices of all shapes and sizes is no problem for us!",
