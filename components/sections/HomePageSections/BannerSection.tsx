@@ -5,6 +5,7 @@ import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 //components
 import Button from "../../UI/Button";
 //styles
+
 import styles from "./BannerSection.module.css";
 
 const BannerSection = () => {
