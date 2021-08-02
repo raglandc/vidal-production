@@ -24,7 +24,7 @@
   color: #111;
   font-size: 6.18rem;
   opacity: 1;
-  transition: opacity 1000ms ease-out, transform 1000ms ease-out;
+  transition: opacity 1618ms ease-in, transform 1000ms ease-out;
 }
 
 .pStart {
@@ -36,7 +36,7 @@
   font-size: 3rem;
   margin: 0 0 3.618rem 0;
   opacity: 1;
-  transition: opacity 1618ms ease-in;
+  transition: opacity 1618ms ease-in-out;
 }
 
 .p__text {
