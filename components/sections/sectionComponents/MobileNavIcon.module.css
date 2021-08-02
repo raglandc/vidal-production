@@ -10,7 +10,7 @@
 .menuSlash {
   width: 61.8%;
   height: 3px;
-  background-color: #fff;
+  background-color: #111;
   margin: 2px auto;
   transition: all 0.314s ease-in-out;
 }
@@ -19,7 +19,7 @@
 .menuSlashActive_middle {
   width: 34%;
   height: 3px;
-  background-color: #fff;
+  background-color: #111;
   margin: 2px auto;
   transition: all 0.1618s ease-out;
 }

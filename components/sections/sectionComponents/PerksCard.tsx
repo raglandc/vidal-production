@@ -14,7 +14,7 @@ type PerksCardProps = {
 
 const PerksCard = (props: PerksCardProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const entry = useIntersectionObserver(ref, { threshold: 0.618 });
+  const entry = useIntersectionObserver(ref, { threshold: 0.5 });
   const isVisible = !!entry?.isIntersecting;
 
   return (
