@@ -1,0 +1,13 @@
+.logo_container {
+  width: 6rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.svgClass {
+  font-size: 55rem;
+  fill: #fff;
+}

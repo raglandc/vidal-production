@@ -1,7 +1,7 @@
 //libaray imports
 import { useRef } from "react";
 import Image from "next/image";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 //styles
 import styles from "./PerksCard.module.css";
 
@@ -14,7 +14,7 @@ type PerksCardProps = {
 
 const PerksCard = (props: PerksCardProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const entry = useIntersectionObserver(ref, { threshold: 0.4 });
+  const entry = useIntersectionObserver(ref, { threshold: 0.618 });
   const isVisible = !!entry?.isIntersecting;
 
   return (

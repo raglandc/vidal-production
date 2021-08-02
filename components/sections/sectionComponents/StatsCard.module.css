@@ -1,3 +1,8 @@
+.start {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
 .card {
   width: 100%;
   min-height: 30rem;
@@ -11,6 +16,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  opacity: 1;
+  transition: opacity 1618ms ease-out, transform 1618ms ease-out;
 }
 
 .quote {

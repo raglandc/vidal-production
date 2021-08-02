@@ -1,6 +1,6 @@
 //components
-import Logo from "../sectionComponents/Logo";
-import MobileNavIcon from "../sectionComponents/MobileNavIcon";
+import Logo from "../sections/sectionComponents/Logo";
+import MobileNavIcon from "../sections/sectionComponents/MobileNavIcon";
 
 //styles
 import styles from "./MainNavigation.module.css";

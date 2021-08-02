@@ -1,5 +1,5 @@
 import SectionWrapper from "../../UI/SectionWrapper";
-import StatsCard from "../../sectionComponents/StatsCard";
+import StatsCard from "../sectionComponents/StatsCard";
 
 //styles
 import styles from "./StatsSection.module.css";
