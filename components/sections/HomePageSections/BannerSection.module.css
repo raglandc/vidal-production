@@ -10,16 +10,33 @@
   margin: 0 0 3.14rem;
 }
 
+.titleVidal {
+  opacity: 0;
+  transform: translate(-150px);
+}
+.titleSoftware {
+  opacity: 0;
+  transform: translate(150px);
+}
+
 .title {
   margin: 0 0 1rem 0;
   color: #111;
   font-size: 6.18rem;
+  opacity: 1;
+  transition: opacity 1000ms ease-out, transform 1000ms ease-out;
+}
+
+.pStart {
+  opacity: 0;
 }
 
 .p {
   color: #6b7280;
   font-size: 3rem;
   margin: 0 0 3.618rem 0;
+  opacity: 1;
+  transition: opacity 1618ms ease-in;
 }
 
 .p__text {

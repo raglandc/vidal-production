@@ -1,3 +1,6 @@
+.start {
+  opacity: 0;
+}
 .button {
   width: 13rem;
   height: 5rem;
@@ -9,6 +12,8 @@
   font-size: 1.618rem;
   color: #fff;
   background-color: #2563eb;
+  opacity: 1;
+  transition: opacity 1618ms ease-in;
 }
 
 .button:hover {
