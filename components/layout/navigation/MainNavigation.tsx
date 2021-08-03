@@ -2,7 +2,7 @@
 
 //components
 import { useState } from "react";
-import Logo from "../sections/sectionComponents/Logo";
+import Logo from "../../sections/sectionComponents/Logo";
 import MobileNavIcon from "./sideDrawer/MobileNavIcon";
 import ListNavigation from "./sideDrawer/ListNavigation";
 

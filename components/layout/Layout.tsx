@@ -1,5 +1,5 @@
-import MainNavigation from "./MainNavigation";
-import Footer from "./Footer";
+import MainNavigation from "./navigation/MainNavigation";
+import Footer from "./footer/Footer";
 
 ///styles///
 import styles from "./Layout.module.css";
