@@ -3,8 +3,8 @@
 //components
 import { useState } from "react";
 import Logo from "../sections/sectionComponents/Logo";
-import MobileNavIcon from "../sections/sectionComponents/MobileNavIcon";
-import ListNavigation from "../sections/sectionComponents/ListNavigation";
+import MobileNavIcon from "./sideDrawer/MobileNavIcon";
+import ListNavigation from "./sideDrawer/ListNavigation";
 
 //styles
 import styles from "./MainNavigation.module.css";
