@@ -1,0 +1,10 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 101%;
+  height: 100%;
+  z-index: 20;
+
+  background-color: rgba(17, 17, 17, 0.801);
+}

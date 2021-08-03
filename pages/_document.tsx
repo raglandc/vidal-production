@@ -18,8 +18,8 @@ class MyDocument extends Document {
         <Head />
         <body>
           <Main />
-          <NextScript />
           <div id="modal"></div>
+          <NextScript />
         </body>
       </Html>
     );

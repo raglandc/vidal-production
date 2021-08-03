@@ -1,21 +1,19 @@
+import { FC } from "react";
 import MainNavigation from "./navigation/MainNavigation";
 import Footer from "./footer/Footer";
 
 ///styles///
 import styles from "./Layout.module.css";
+import Modal from "../UI/Modal";
 
-type LayoutProps = {
-  children?: React.ReactNode;
-};
-
-function Layout({ children }: LayoutProps) {
+const Layout: FC = (props) => {
   return (
     <div>
       <MainNavigation />
-      <main className={styles.main}>{children}</main>
+      <main className={styles.main}>{props.children}</main>
       <Footer />
     </div>
   );
-}
+};
 
 export default Layout;

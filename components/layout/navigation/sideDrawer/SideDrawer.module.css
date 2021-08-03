@@ -1,0 +1,23 @@
+.sideDrawer {
+  z-index: 30;
+  background-color: #fff;
+  color: #6b7280;
+  font-size: 6.18rem;
+  width: 78.6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listItem {
+  padding: 1rem;
+  margin: 3rem auto;
+}
