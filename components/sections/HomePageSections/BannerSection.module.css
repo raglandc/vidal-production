@@ -15,10 +15,6 @@
   opacity: 0;
   transform: translate(-150px);
 }
-.titleSoftware {
-  opacity: 0;
-  transform: translate(150px);
-}
 
 .title {
   margin: 0 0 1rem 0;

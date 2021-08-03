@@ -19,12 +19,6 @@ const BannerSection = () => {
         <h1 ref={ref} className={isVisible ? styles.title : styles.titleVidal}>
           Vidal
         </h1>
-        <h1
-          ref={ref}
-          className={isVisible ? styles.title : styles.titleSoftware}
-        >
-          Software
-        </h1>
       </div>
       <div ref={ref} className={isVisible ? styles.p : styles.pStart}>
         <p className={styles.p__text}>
