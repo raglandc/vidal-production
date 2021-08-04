@@ -7,12 +7,11 @@
   z-index: 30;
   background-color: #fff;
   color: #6b7280;
-  font-size: 4.18rem;
+  font-size: 3.14rem;
   width: 78.6%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   transform: translate(0px);
@@ -20,12 +19,19 @@
 }
 
 .list {
+  width: 99%;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .listItem {
-  padding: 1rem;
+  padding: 3rem;
   margin: 3rem auto;
+}
+
+.listItem:active {
+  background-color: #6b728036;
+  color: #3b82f6;
 }
