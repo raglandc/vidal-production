@@ -3,13 +3,19 @@
   background-color: #fff;
   color: #6b7280;
   font-size: 4.18rem;
-
   width: 78.6%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform: translate(0);
+
+  transition: 3s ease-in-out;
+}
+
+.closed {
+  transform: translate(-400px);
 }
 
 .list {
