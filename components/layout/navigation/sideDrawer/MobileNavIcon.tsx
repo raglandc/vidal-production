@@ -1,35 +1,34 @@
 //library imports
 import { FC } from "react";
-import { useState } from "react";
 import Modal from "../../../UI/Modal";
 import SideDrawer from "./SideDrawer";
+
+//state managment imports
+import { useAppDispatch, useAppSelector } from "../../../../app/hooks";
+import {
+  setMenuStatus,
+  selectStatus,
+} from "../../../../app/features/menuStatusSlice";
 
 //styles
 import styles from "./MobileNavIcon.module.css";
 
-const MobileNavIcon: FC = (props) => {
-  const [mobileMenuStatus, setMobileMenuStatus] = useState(false);
-
-  const mobileMenuStatusHandler = () => {
-    if (mobileMenuStatus) {
-      setMobileMenuStatus(false);
-    } else {
-      setMobileMenuStatus(true);
-    }
-  };
+const MobileNavIcon: FC = () => {
+  const dispatch = useAppDispatch();
+  const status = useAppSelector(selectStatus);
 
   return (
     <>
-      {mobileMenuStatus ? (
+      {status ? (
         <Modal selector="modal">
           <SideDrawer />
         </Modal>
       ) : null}
-      <div className={styles.menu} onClick={mobileMenuStatusHandler}>
+      <div className={styles.menu} onClick={() => dispatch(setMenuStatus())}>
         <div className={styles.menuSlash}></div>
         <div
           className={`${
-            !mobileMenuStatus ? styles.menuSlash : styles.menuSlashActive_middle
+            !status ? styles.menuSlash : styles.menuSlashActive_middle
           }`}
         ></div>
         <div className={styles.menuSlash}></div>
