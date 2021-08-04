@@ -2,6 +2,7 @@
 
 //components
 import { useState } from "react";
+import Link from "next/link";
 import Logo from "../../sections/sectionComponents/Logo";
 import MobileNavIcon from "./sideDrawer/MobileNavIcon";
 import ListNavigation from "./sideDrawer/ListNavigation";
@@ -13,7 +14,11 @@ import styles from "./MainNavigation.module.css";
 const MainNavigation = () => {
   return (
     <nav className={styles.navigation}>
-      <Logo />
+      <Link href="/">
+        <a>
+          <Logo />
+        </a>
+      </Link>
       <ListNavigation />
       <MobileNavIcon />
     </nav>
