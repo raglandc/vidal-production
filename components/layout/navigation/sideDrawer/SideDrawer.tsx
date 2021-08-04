@@ -1,3 +1,7 @@
+//state management
+import { useAppSelector } from "../../../../app/hooks";
+import { selectStatus } from "../../../../app/features/menuStatusSlice";
+
 //local
 import Link from "next/link";
 
@@ -39,8 +43,10 @@ const ListItem = (props: ListItemProps) => {
 };
 
 const SideDrawer = () => {
+  const status = useAppSelector(selectStatus);
+
   return (
-    <div className={styles.sideDrawer}>
+    <div className={status ? styles.sideDrawer : styles.start}>
       <ul className={styles.list}>
         {linkList.map((link) => {
           return (
