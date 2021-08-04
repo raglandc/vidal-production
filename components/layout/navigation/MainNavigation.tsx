@@ -1,7 +1,6 @@
 //library
 
 //components
-import { useState } from "react";
 import Link from "next/link";
 import Logo from "../../sections/sectionComponents/Logo";
 import MobileNavIcon from "./sideDrawer/MobileNavIcon";

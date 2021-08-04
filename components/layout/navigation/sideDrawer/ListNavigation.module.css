@@ -12,6 +12,12 @@
   padding-right: 1rem;
 }
 
+.active {
+  margin: 1rem;
+  padding-right: 1rem;
+  color: #2563eb;
+}
+
 .listItem:hover {
   color: #2563eb;
 }

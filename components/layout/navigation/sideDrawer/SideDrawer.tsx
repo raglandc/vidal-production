@@ -6,6 +6,7 @@ import { selectStatus } from "../../../../app/features/menuStatusSlice";
 import Link from "next/link";
 
 import styles from "./SideDrawer.module.css";
+import { useRouter } from "next/dist/client/router";
 
 const linkList = [
   {
@@ -33,8 +34,10 @@ type ListItemProps = {
 };
 
 const ListItem = (props: ListItemProps) => {
+  const { asPath } = useRouter();
+
   return (
-    <li className={styles.listItem}>
+    <li className={asPath === props.link ? styles.active : styles.listItem}>
       <Link href={props.link}>
         <a>{props.linkTitle}</a>
       </Link>
