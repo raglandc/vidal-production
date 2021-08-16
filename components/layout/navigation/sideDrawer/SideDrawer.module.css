@@ -1,5 +1,5 @@
 .start {
-  transform: translate(-400px);
+  transform: translate(-100%);
   transition: transform 1618ms ease-in-out;
 }
 
@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
 
-  transform: translate(0px);
+  transform: translate(0);
   transition: transform 1618ms ease-in-out;
 }
 
