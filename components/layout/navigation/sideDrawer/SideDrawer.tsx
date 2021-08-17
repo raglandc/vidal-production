@@ -4,7 +4,7 @@ import { selectStatus } from "../../../../app/features/menuStatusSlice";
 
 //local
 import Link from "next/link";
-import { CSSTransiton } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
 import styles from "./SideDrawer.module.css";
 import { useRouter } from "next/dist/client/router";
@@ -52,19 +52,30 @@ const SideDrawer = () => {
 
   return (
     <Modal open={status} selector="modal">
-      <div className={status ? styles.sideDrawer : styles.start}>
-        <ul className={styles.list}>
-          {linkList.map((link) => {
-            return (
-              <ListItem
-                key={link.link}
-                link={link.link}
-                linkTitle={link.linkTitle}
-              />
-            );
-          })}
-        </ul>
-      </div>
+      <CSSTransition
+        in={status}
+        timeout={162}
+        classNames={{
+          enterActive: styles.sideDrawerEnterActive,
+          enterDone: styles.sideDrawerEnterDone,
+          exitActive: styles.sideDrawerExitActive,
+          exitDone: styles.sideDrawerExitDone,
+        }}
+      >
+        <div className={styles.sideDrawer}>
+          <ul className={styles.list}>
+            {linkList.map((link) => {
+              return (
+                <ListItem
+                  key={link.link}
+                  link={link.link}
+                  linkTitle={link.linkTitle}
+                />
+              );
+            })}
+          </ul>
+        </div>
+      </CSSTransition>
     </Modal>
   );
 };
