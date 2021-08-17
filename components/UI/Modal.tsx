@@ -32,12 +32,18 @@ const Modal = ({ children, selector }: ModalType) => {
     return () => setMounted(false);
   }, [selector]);
 
+  const closeMenuHandler = () => {
+    if (status) {
+      dispatch(setMenuStatus());
+    }
+  };
+
   //will not be able to unmount with animations, yet to find a way
   //due to conditional render
   return mounted
     ? ReactDOM.createPortal(
         <div
-          onClick={() => dispatch(setMenuStatus())}
+          onClick={closeMenuHandler}
           className={status ? styles.modal : styles.hidden}
         >
           {children}

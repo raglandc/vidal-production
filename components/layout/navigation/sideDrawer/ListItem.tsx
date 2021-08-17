@@ -17,13 +17,19 @@ type ListItemProps = {
 };
 
 const ListItem = (props: ListItemProps) => {
+  const closeMenuHandler = () => {
+    if (status) {
+      dispatch(setMenuStatus());
+    }
+  };
+
   const dispatch = useAppDispatch();
   const { asPath } = useRouter();
 
   return (
     <li
       className={asPath === props.link ? styles.active : styles.listItem}
-      onClick={() => dispatch(setMenuStatus())}
+      onClick={closeMenuHandler}
     >
       <Link href={props.link}>
         <a>{props.linkTitle}</a>
