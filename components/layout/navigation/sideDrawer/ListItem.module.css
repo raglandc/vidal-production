@@ -1,0 +1,15 @@
+.listItem {
+  padding: 3rem;
+  margin: 3rem auto;
+}
+
+.active {
+  color: #3b82f6;
+  padding: 3rem;
+  margin: 3rem auto;
+}
+
+.listItem:active {
+  background-color: #6b728036;
+  color: #3b82f6;
+}

@@ -1,7 +1,3 @@
-//library imports
-import { FC } from "react";
-import SideDrawer from "./SideDrawer";
-
 //state managment imports
 import { useAppDispatch, useAppSelector } from "../../../../app/hooks";
 import {
@@ -9,10 +5,17 @@ import {
   selectStatus,
 } from "../../../../app/features/menuStatusSlice";
 
+//component imports
+import SideDrawer from "./SideDrawer";
+
 //styles
 import styles from "./MobileNavIcon.module.css";
 
-const MobileNavIcon: FC = () => {
+///////////////////////////
+/////Main Component////////
+///////////////////////////
+
+const MobileNavIcon = () => {
   const dispatch = useAppDispatch();
   const status = useAppSelector(selectStatus);
 

@@ -1,18 +1,18 @@
-//state management
-import { useAppSelector, useAppDispatch } from "../../../../app/hooks";
-import {
-  selectStatus,
-  setMenuStatus,
-} from "../../../../app/features/menuStatusSlice";
-
-//local
-import Link from "next/link";
+//library imports
 import { CSSTransition } from "react-transition-group";
 
-import styles from "./SideDrawer.module.css";
-import { useRouter } from "next/dist/client/router";
-import Modal from "../../../UI/Modal";
+//state management
+import { useAppSelector } from "../../../../app/hooks";
+import { selectStatus } from "../../../../app/features/menuStatusSlice";
 
+//component imports
+import Modal from "../../../UI/Modal";
+import ListItem from "./ListItem";
+
+//styles
+import styles from "./SideDrawer.module.css";
+
+//links with routes and titles
 const linkList = [
   {
     link: "/",
@@ -32,27 +32,9 @@ const linkList = [
   },
 ];
 
-type ListItemProps = {
-  key: string;
-  link: string;
-  linkTitle: string;
-};
-
-const ListItem = (props: ListItemProps) => {
-  const dispatch = useAppDispatch();
-  const { asPath } = useRouter();
-
-  return (
-    <li
-      onClick={() => dispatch(setMenuStatus())}
-      className={asPath === props.link ? styles.active : styles.listItem}
-    >
-      <Link href={props.link}>
-        <a>{props.linkTitle}</a>
-      </Link>
-    </li>
-  );
-};
+//////////////////////////////
+////////Main component///////
+/////////////////////////////
 
 const SideDrawer = () => {
   const status = useAppSelector(selectStatus);
