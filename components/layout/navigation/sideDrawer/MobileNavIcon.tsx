@@ -22,9 +22,7 @@ const MobileNavIcon: FC = () => {
       <div className={styles.menu} onClick={() => dispatch(setMenuStatus())}>
         <div className={styles.menuSlash}></div>
         <div
-          className={`${
-            !status ? styles.menuSlash : styles.menuSlashActive_middle
-          }`}
+          className={!status ? styles.menuSlash : styles.menuSlashActive_middle}
         ></div>
         <div className={styles.menuSlash}></div>
       </div>

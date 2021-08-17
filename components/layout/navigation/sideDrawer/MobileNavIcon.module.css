@@ -12,7 +12,7 @@
   height: 3px;
   background-color: #6b7280;
   margin: 2px auto;
-  transition: width 0.314s ease-in-out;
+  transition: width 0.314s ease-out;
 }
 
 /* menu icon animation */
