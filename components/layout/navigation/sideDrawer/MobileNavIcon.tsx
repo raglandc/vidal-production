@@ -19,11 +19,7 @@ const MobileNavIcon: FC = () => {
 
   return (
     <>
-      {status ? (
-        <Modal selector="modal">
-          <SideDrawer />
-        </Modal>
-      ) : null}
+      <SideDrawer />
       <div className={styles.menu} onClick={() => dispatch(setMenuStatus())}>
         <div className={styles.menuSlash}></div>
         <div

@@ -7,9 +7,10 @@ import styles from "./Modal.module.css";
 type ModalType = {
   children?: React.ReactNode;
   selector: string;
+  open: boolean;
 };
 
-const Modal = ({ children, selector }: ModalType) => {
+const Modal = ({ children, selector, open }: ModalType) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -20,7 +21,7 @@ const Modal = ({ children, selector }: ModalType) => {
 
   return mounted
     ? ReactDOM.createPortal(
-        <div className={styles.modal}>{children}</div>,
+        <div className={open ? styles.modal : styles.hidden}>{children}</div>,
         document.getElementById(selector)!
       )
     : null;

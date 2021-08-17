@@ -4,9 +4,11 @@ import { selectStatus } from "../../../../app/features/menuStatusSlice";
 
 //local
 import Link from "next/link";
+import { CSSTransiton } from "react-transition-group";
 
 import styles from "./SideDrawer.module.css";
 import { useRouter } from "next/dist/client/router";
+import Modal from "../../../UI/Modal";
 
 const linkList = [
   {
@@ -49,19 +51,21 @@ const SideDrawer = () => {
   const status = useAppSelector(selectStatus);
 
   return (
-    <div className={status ? styles.sideDrawer : styles.start}>
-      <ul className={styles.list}>
-        {linkList.map((link) => {
-          return (
-            <ListItem
-              key={link.link}
-              link={link.link}
-              linkTitle={link.linkTitle}
-            />
-          );
-        })}
-      </ul>
-    </div>
+    <Modal open={status} selector="modal">
+      <div className={status ? styles.sideDrawer : styles.start}>
+        <ul className={styles.list}>
+          {linkList.map((link) => {
+            return (
+              <ListItem
+                key={link.link}
+                link={link.link}
+                linkTitle={link.linkTitle}
+              />
+            );
+          })}
+        </ul>
+      </div>
+    </Modal>
   );
 };
 export default SideDrawer;
