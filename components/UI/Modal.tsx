@@ -1,6 +1,9 @@
 //state management
-import { useAppSelector } from "../../app/hooks";
-import { selectStatus } from "../../app/features/menuStatusSlice";
+import { useAppSelector, useAppDispatch } from "../../app/hooks";
+import {
+  selectStatus,
+  setMenuStatus,
+} from "../../app/features/menuStatusSlice";
 
 import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
@@ -14,6 +17,7 @@ type ModalType = {
 };
 
 const Modal = ({ children, selector }: ModalType) => {
+  const dispatch = useAppDispatch();
   const status = useAppSelector(selectStatus);
   const [mounted, setMounted] = useState(false);
 
@@ -25,7 +29,12 @@ const Modal = ({ children, selector }: ModalType) => {
 
   return mounted
     ? ReactDOM.createPortal(
-        <div className={status ? styles.modal : styles.hidden}>{children}</div>,
+        <div
+          onClick={() => dispatch(setMenuStatus())}
+          className={status ? styles.modal : styles.hidden}
+        >
+          {children}
+        </div>,
         document.getElementById(selector)!
       )
     : null;

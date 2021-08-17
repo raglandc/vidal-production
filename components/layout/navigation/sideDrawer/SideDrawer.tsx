@@ -1,6 +1,9 @@
 //state management
-import { useAppSelector } from "../../../../app/hooks";
-import { selectStatus } from "../../../../app/features/menuStatusSlice";
+import { useAppSelector, useAppDispatch } from "../../../../app/hooks";
+import {
+  selectStatus,
+  setMenuStatus,
+} from "../../../../app/features/menuStatusSlice";
 
 //local
 import Link from "next/link";
@@ -36,10 +39,14 @@ type ListItemProps = {
 };
 
 const ListItem = (props: ListItemProps) => {
+  const dispatch = useAppDispatch();
   const { asPath } = useRouter();
 
   return (
-    <li className={asPath === props.link ? styles.active : styles.listItem}>
+    <li
+      onClick={() => dispatch(setMenuStatus())}
+      className={asPath === props.link ? styles.active : styles.listItem}
+    >
       <Link href={props.link}>
         <a>{props.linkTitle}</a>
       </Link>
