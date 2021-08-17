@@ -1,8 +1,3 @@
-.start {
-  transform: translate(-100%);
-  transition: transform 1618ms ease-in-out;
-}
-
 .sideDrawer {
   z-index: 30;
   background-color: #fff;
@@ -13,9 +8,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
+.sideDrawerEnterActive {
+  transform: translate(-100%);
+}
+.sideDrawerEnterDone {
   transform: translate(0);
-  transition: transform 1618ms ease-in-out;
+  transition: transform 314ms;
+}
+.sideDrawerExitActive {
+  transform: translate(0);
+}
+.sideDrawerExitDone {
+  transform: translate(-100%);
+  transition: transform 314ms;
 }
 
 .list {

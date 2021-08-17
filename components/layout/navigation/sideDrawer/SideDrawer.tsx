@@ -51,7 +51,7 @@ const SideDrawer = () => {
   const status = useAppSelector(selectStatus);
 
   return (
-    <Modal open={status} selector="modal">
+    <Modal selector="modal">
       <CSSTransition
         in={status}
         timeout={162}
