@@ -1,6 +1,5 @@
 //library imports
 import { FC } from "react";
-import Modal from "../../../UI/Modal";
 import SideDrawer from "./SideDrawer";
 
 //state managment imports
