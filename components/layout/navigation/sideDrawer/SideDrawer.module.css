@@ -5,6 +5,8 @@
   font-size: 3.14rem;
   width: 78.6%;
   height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,4 +41,13 @@
   font-size: 5rem;
   width: 90%;
   border-bottom: 2px solid #6b728036;
+}
+.iconContainer {
+  margin: 1rem auto;
+  border-top: 2px solid #6b728036;
+}
+
+.icon {
+  margin: 2rem;
+  font-size: 4rem;
 }

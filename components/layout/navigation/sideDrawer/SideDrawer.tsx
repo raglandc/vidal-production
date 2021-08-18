@@ -1,6 +1,8 @@
 //library imports
 import { CSSTransition } from "react-transition-group";
-
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 //state management
 import { useAppSelector } from "../../../../app/hooks";
 import { selectStatus } from "../../../../app/features/menuStatusSlice";
@@ -63,6 +65,20 @@ const SideDrawer = () => {
                 />
               );
             })}
+            <div className={styles.iconContainer}>
+              <Link
+                href={"https://www.linkedin.com/in/chris-ragland-42461a1b4/"}
+              >
+                <a target="_blank">
+                  <FontAwesomeIcon className={styles.icon} icon={faLinkedin} />
+                </a>
+              </Link>
+              <Link href={"https://github.com/raglandc"}>
+                <a target="_blank">
+                  <FontAwesomeIcon className={styles.icon} icon={faGithub} />
+                </a>
+              </Link>
+            </div>
           </ul>
         </div>
       </CSSTransition>
