@@ -1,5 +1,5 @@
 //components
-import PerksCard from "../sectionComponents/PerksCard";
+import PerksCard from "./homepageComponents/PerksCard";
 import fast from "../../../public/fast.svg";
 import seo from "../../../public/seo.svg";
 import responsive from "../../../public/responsive.svg";

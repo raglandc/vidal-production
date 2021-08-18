@@ -47,9 +47,10 @@
 
   .p {
     text-align: center;
+    font-size: 4rem;
   }
 
   .title {
-    font-size: 11rem;
+    font-size: 13rem;
   }
 }
