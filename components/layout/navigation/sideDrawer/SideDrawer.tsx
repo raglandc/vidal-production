@@ -52,6 +52,7 @@ const SideDrawer = () => {
         }}
       >
         <div className={styles.sideDrawer}>
+          <h3 className={styles.menuHeader}>Menu</h3>
           <ul className={styles.list}>
             {linkList.map((link) => {
               return (

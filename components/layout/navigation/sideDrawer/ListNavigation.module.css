@@ -8,13 +8,13 @@
 }
 
 .listItem {
-  margin: 1rem;
-  padding-right: 1rem;
+  margin: 1rem 0;
+  padding: 0 2rem;
 }
 
 .active {
-  margin: 1rem;
-  padding-right: 1rem;
+  margin: 1rem 0;
+  padding: 0 2rem;
   color: #2563eb;
 }
 
