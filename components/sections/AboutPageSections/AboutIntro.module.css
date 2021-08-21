@@ -1,0 +1,46 @@
+.pageHeader {
+  margin: 9rem 0 0 0;
+  font-size: 8rem;
+  color: #111;
+}
+
+.sectionContainer {
+  margin: 3rem auto;
+  border: 1px solid #6b7280;
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative;
+}
+
+.logoContainer {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.p {
+  color: #6b7280;
+  font-size: 3rem;
+  padding: 0 2rem;
+  margin: 2rem 0;
+}
+
+.sig {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  border-radius: 13px;
+  padding: 3rem 5rem;
+  width: max-content;
+  height: 5rem;
+  position: absolute;
+  bottom: -3rem;
+  right: -1rem;
+}
