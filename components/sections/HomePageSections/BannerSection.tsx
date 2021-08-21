@@ -27,7 +27,10 @@ const BannerSection = () => {
         <p className={styles.p__text}>These days, its vital.</p>
         <p className={styles.p__text}>Meet Vidal.</p>
       </div>
-      <Button />
+      <div>
+        <Button link="/about" title="Learn More" />
+        <Button link="/contact" title="Contact" />
+      </div>
     </div>
   );
 };
