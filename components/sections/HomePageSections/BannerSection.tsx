@@ -28,8 +28,8 @@ const BannerSection = () => {
         <p className={styles.p__text}>Meet Vidal.</p>
       </div>
       <div>
-        <Button link="/about" title="Learn More" />
-        <Button link="/contact" title="Contact" />
+        <Button link="/about" title="Learn More" style="hollow" />
+        <Button link="/contact" title="Contact" style="solid" />
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ import styles from "./Button.module.css";
 type ButtonType = {
   link: string;
   title: string;
+  style: string;
 };
 
 const Button = (props: ButtonType) => {
@@ -15,8 +16,10 @@ const Button = (props: ButtonType) => {
   const entry = useIntersectionObserver(ref, {});
   const isVisible = !!entry?.isIntersecting;
 
+  const buttonStyle = props.style === "solid" ? styles.solid : styles.hollow;
+
   return (
-    <button ref={ref} className={isVisible ? styles.button : styles.start}>
+    <button ref={ref} className={`${isVisible ? buttonStyle : styles.start}`}>
       <Link href={props.link}>
         <a>{props.title}</a>
       </Link>

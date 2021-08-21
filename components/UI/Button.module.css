@@ -1,27 +1,51 @@
 .start {
   opacity: 0;
 }
-.button {
+
+.solid {
   width: 13rem;
   height: 5rem;
-  margin: 1.618rem;
-
+  margin: 1rem;
   border: none;
   border-radius: 6.18px;
-  box-shadow: 0rem 0.1rem 0.618rem #6b7280;
   font-size: 1.618rem;
   color: #fff;
   background-color: #2563eb;
   opacity: 1;
   transition: opacity 1618ms ease-in;
+  box-shadow: 0rem 0.1rem 0.618rem #6b7280;
 }
 
-.button:hover {
+.solid:hover {
   background-color: #3b82f6;
   box-shadow: 0rem 0.2rem 0.886rem #6b7280;
   cursor: pointer;
+  transition: all 100ms ease-out;
 }
 
-.button:active {
+.hollow {
+  width: 13rem;
+  height: 5rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 6.18px;
+  font-size: 1.618rem;
+  opacity: 1;
+  transition: opacity 1618ms ease-in;
+  background-color: transparent;
+  border: 2px solid #111;
+}
+
+.hollow:hover {
+  background-color: #3b82f6;
+  box-shadow: 0rem 0.2rem 0.886rem #6b7280;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  transition: all 100ms ease-out;
+}
+
+.solid:active,
+.hollow:active {
   box-shadow: 0rem 0.06rem 0.618rem #6b7280;
 }
