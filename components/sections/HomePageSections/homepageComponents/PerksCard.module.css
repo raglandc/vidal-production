@@ -26,7 +26,9 @@
 }
 
 .description {
+  text-indent: 10%;
   color: grey;
   font-size: 2rem;
   line-height: 2.618rem;
+  text-align: left;
 }
