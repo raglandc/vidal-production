@@ -5,15 +5,45 @@
   margin: 8rem auto;
   font-size: 5rem;
   border-radius: 21px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.header {
-  color: #fff;
+.headers {
   margin: 0;
 }
 
-@media only screen and (min-width: 360px) {
+.headerContainer {
+  color: #fff;
+}
+
+@media only screen and (min-width: 350px) {
   .container {
     padding: 8rem 3.14rem;
   }
+}
+
+@media only screen and (min-width: 700px) {
+  .container {
+    flex-direction: row;
+  }
+  .header {
+    padding: 0 3.5rem;
+  }
+  .headerContainer {
+    width: 50%;
+  }
+  .logo {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  transform: translate(-5px);
+  margin: 3rem auto 0 auto;
 }
