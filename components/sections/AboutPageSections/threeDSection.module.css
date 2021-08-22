@@ -3,7 +3,7 @@
   padding: 8rem 0;
   background: #111;
   margin: 8rem auto;
-  font-size: 5rem;
+  font-size: 4.9rem;
   border-radius: 21px;
 
   display: flex;
@@ -22,15 +22,17 @@
 @media only screen and (min-width: 350px) {
   .container {
     padding: 8rem 3.14rem;
+    font-size: 6.18rem;
   }
 }
 
 @media only screen and (min-width: 700px) {
   .container {
     flex-direction: row;
+    font-size: 6.18rem;
   }
-  .header {
-    padding: 0 3.5rem;
+  .headers {
+    padding: 0 0 0 15%;
   }
   .headerContainer {
     width: 50%;
