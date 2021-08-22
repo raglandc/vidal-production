@@ -16,9 +16,9 @@ const AboutIntro = () => {
         </div>
         <div className={styles.container}>
           <p className={styles.p}>
-            Vidal&apos;s promise is to deliver high quality websites that scream
-            modern and professional. Vidal adhears to the KISS method of design.
-            Keep It Simple Stupid.
+            &ldquo;Vidal&apos;s promise is to deliver high quality websites that
+            scream modern and professional. Vidal adhears to the KISS method
+            while designing: Keep It Simple Stupid.&rdquo;
           </p>
           <div className={styles.sig}>
             <Image src={SigSvg} alt="president sig for design" />

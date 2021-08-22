@@ -19,7 +19,11 @@
   }
 
   .introContainer {
-    height: 50%;
+    width: 88%;
+  }
+
+  .p {
+    padding: 0 10%;
   }
 }
 
@@ -48,9 +52,11 @@
 }
 
 .p {
+  line-height: 1.618;
+  text-indent: 10%;
   color: #6b7280;
   font-size: 3rem;
-  padding: 0 2rem;
+  text-align: left;
   margin: 2rem 0;
 }
 
