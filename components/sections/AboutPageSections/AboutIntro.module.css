@@ -1,15 +1,32 @@
-.pageHeader {
-  margin: 9rem 0 0 0;
-  font-size: 8rem;
-  color: #111;
+.pageContainer {
+  margin: 6.18rem auto;
 }
 
-.sectionContainer {
+.pageHeader {
+  font-size: 8rem;
+  color: #111;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 721px) {
+  .pageContainer {
+    height: 94vh;
+  }
+
+  .introContainer {
+    height: 50%;
+  }
+}
+
+.introContainer {
   margin: 3rem auto;
-  border: 1px solid #6b7280;
+  border: 2px solid #6b7280;
   border-radius: 8px;
   padding: 1rem;
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .logoContainer {
@@ -36,11 +53,20 @@
   justify-content: center;
   align-items: center;
   background: #111;
-  border-radius: 13px;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0rem 0.1rem 0.618rem #6b7280;
   padding: 3rem 5rem;
-  width: max-content;
-  height: 5rem;
+  width: auto;
+  height: 8rem;
   position: absolute;
-  bottom: -3rem;
+  bottom: -5rem;
   right: -1rem;
+}
+
+.president {
+  border-left: 1px solid #fff;
+  margin: 0 0 0 1rem;
+  padding: 0 0.5rem;
+  font-size: 1.618rem;
 }

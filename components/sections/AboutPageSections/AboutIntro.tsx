@@ -8,9 +8,9 @@ import styles from "./AboutIntro.module.css";
 
 const AboutIntro = () => {
   return (
-    <>
+    <div className={styles.pageContainer}>
       <h2 className={styles.pageHeader}>About</h2>
-      <div className={styles.sectionContainer}>
+      <div className={styles.introContainer}>
         <div className={styles.logoContainer}>
           <Image src={LogoSvg} alt="Vidal Logo" />
         </div>
@@ -21,11 +21,12 @@ const AboutIntro = () => {
             Keep It Simple Stupid.
           </p>
           <div className={styles.sig}>
-            <Image src={SigSvg} alt="president signiture for design purpose" />
+            <Image src={SigSvg} alt="president sig for design" />
+            <div className={styles.president}>Founder</div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

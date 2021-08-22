@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  padding: 8rem 0;
+  background: #111;
+  margin: 8rem auto;
+  font-size: 5rem;
+  border-radius: 21px;
+}
+
+.header {
+  color: #fff;
+  margin: 0;
+}
+
+@media only screen and (min-width: 360px) {
+  .container {
+    padding: 8rem 3.14rem;
+  }
+}
