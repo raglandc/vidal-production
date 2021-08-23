@@ -19,7 +19,7 @@
 .name {
   font-size: 3.14rem;
   background-color: #111;
-  width: 100%;
+  width: 61.8%;
   margin: 0 auto;
   padding: 0.618rem 1rem;
   color: #fff;
@@ -33,6 +33,7 @@
 }
 
 .cardDescription {
+  background-color: rgba(17, 17, 17, 0.1);
   font-size: 2rem;
   line-height: 1.618;
   text-align: center;

@@ -1,17 +1,13 @@
 //library
-import image from "next/image";
 import Image from "next/image";
-
-//local
-
-import profilePic from "../../../../public/gonz.jpg";
 //styles
 
 import styles from "./TeamCard.module.css";
 
 type TeamCardType = {
+  key: number;
   title: string;
-  image: string;
+  image: StaticImageData;
   name: string;
   description: string;
 };
@@ -23,10 +19,10 @@ const TeamCard = (props: TeamCardType) => {
         <div className={styles.cardIntro}>
           <Image
             className={styles.image}
-            src={profilePic}
+            src={props.image}
             alt="team member picture"
             width="162px"
-            height="150px"
+            height="162px"
           />
           <h4 className={styles.name}>{props.name}</h4>
         </div>
