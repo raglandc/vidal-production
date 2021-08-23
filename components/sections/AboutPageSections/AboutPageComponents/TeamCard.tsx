@@ -26,13 +26,9 @@ const TeamCard = (props: TeamCardType) => {
           />
           <h4 className={styles.name}>{props.name}</h4>
         </div>
-        <h4 className={styles.title}>Founder</h4>
+        <h4 className={styles.title}>{props.title}</h4>
       </div>
-      <p className={styles.cardDescription}>
-        This is just a basic text used to describe what the card is basically
-        going to look like. Just filling up space to get a basic idea of how
-        much to type.
-      </p>
+      <p className={styles.cardDescription}>{props.description}</p>
     </div>
   );
 };

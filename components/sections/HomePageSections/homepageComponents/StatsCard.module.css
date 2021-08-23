@@ -7,7 +7,7 @@
   width: 90%;
   min-height: 30rem;
   border-radius: 1.618rem;
-  border: 1px solid rgba(17, 17, 17, 0.322);
+  box-shadow: 0rem 0.1rem 0.618rem #6b7280;
   margin: 1.618rem auto;
   padding: 0 2.5rem;
   text-align: center;
@@ -23,11 +23,11 @@
 
 .quote {
   font-size: 2.618rem;
-  color: #111;
+  color: #6b7280;
 }
 
 .source {
-  color: #6b7280;
+  color: #111;
   font-size: 2rem;
   position: absolute;
   right: 6.18%;

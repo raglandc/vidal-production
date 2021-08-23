@@ -15,24 +15,42 @@ const teamMembers = [
     description:
       "Chris founded Vidal with the intention of building beautiful websites that demonstrate the beauty behind simplicity",
   },
+  {
+    key: 2,
+    name: "克里斯",
+    title: "Engineer",
+    image: FounderPicture,
+    description:
+      "Chris founded Vidal with the intention of building beautiful websites that demonstrate the beauty behind simplicity",
+  },
+  {
+    key: 3,
+    name: "كريس",
+    title: "Designer",
+    image: FounderPicture,
+    description:
+      "Chris founded Vidal with the intention of building beautiful websites that demonstrate the beauty behind simplicity",
+  },
 ];
 
 const TeamCardSection = () => {
   return (
-    <div className={styles.teamCardSectionContainer}>
+    <>
       <h2 className={styles.header}>Meet The Team</h2>
-      {teamMembers.map((teamMember) => {
-        return (
-          <TeamCard
-            key={teamMember.key}
-            name={teamMember.name}
-            title={teamMember.title}
-            image={teamMember.image}
-            description={teamMember.description}
-          />
-        );
-      })}
-    </div>
+      <div className={styles.teamCardSectionContainer}>
+        {teamMembers.map((teamMember) => {
+          return (
+            <TeamCard
+              key={teamMember.key}
+              name={teamMember.name}
+              title={teamMember.title}
+              image={teamMember.image}
+              description={teamMember.description}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 
