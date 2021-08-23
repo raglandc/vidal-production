@@ -4,7 +4,7 @@ import Image from "next/image";
 import LogoSvg from "../../../public/vidal.svg";
 import SigSvg from "../../../public/aboutSig.svg";
 //styles
-import styles from "./AboutIntro.module.css";
+import styles from "./AboutIntroSection.module.css";
 
 const AboutIntro = () => {
   return (
