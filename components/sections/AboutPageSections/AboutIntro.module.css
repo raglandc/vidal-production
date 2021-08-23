@@ -1,5 +1,5 @@
 .pageContainer {
-  margin: 6.18rem auto;
+  margin: 0 auto;
 }
 
 .pageHeader {
@@ -8,14 +8,14 @@
   color: #111;
 }
 @media only screen and (min-width: 721px) {
-  .pageHeader {
-    margin: 0 0 3rem 0;
-  }
   .pageContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 94vh;
+  }
+  .pageHeader {
+    margin: 0 0 3rem 0;
   }
 
   .introContainer {

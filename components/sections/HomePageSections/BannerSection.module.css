@@ -19,7 +19,7 @@
 .title {
   margin: 0 0 1rem 0;
   color: #111;
-  font-size: 8.18rem;
+  font-size: 9rem;
   opacity: 1;
   transition: opacity 1618ms ease-in, transform 1000ms ease-out;
 }
@@ -51,6 +51,6 @@
   }
 
   .title {
-    font-size: 13rem;
+    font-size: 15rem;
   }
 }

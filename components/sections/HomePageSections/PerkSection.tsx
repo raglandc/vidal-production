@@ -15,7 +15,7 @@ const cards: {
     key: "card-1",
     svgLink: fast,
     description:
-      "No one wants to wait for a websites to load. Vidal uses technology that is blazing fast. Which means happy customers for you! Yay! ",
+      "No one wants to wait for a website to load. Vidal uses technology that is lightening fast. Which means happy customers for you! Yay! ",
     title: "Fast",
   },
   {
@@ -29,7 +29,7 @@ const cards: {
     key: "card-3",
     svgLink: responsive,
     description:
-      "More people use their phone to surf the web than ever, having a website that works on devices of all shapes and sizes is no problem for us!",
+      "More people use their phone to surf the web than ever, having a website that works on devices of all shapes and sizes is, well, vital. Vidal has you covered.",
     title: "Responsive",
   },
 ];
