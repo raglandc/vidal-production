@@ -34,7 +34,7 @@ const teamMembers = [
   },
 ];
 
-const TeamCardSection = () => {
+const TeamSection = () => {
   return (
     <>
       <h2 className={styles.header}>Meet The Team</h2>
@@ -56,4 +56,4 @@ const TeamCardSection = () => {
   );
 };
 
-export default TeamCardSection;
+export default TeamSection;
