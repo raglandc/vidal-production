@@ -3,7 +3,8 @@ import TeamCard from "./AboutPageComponents/TeamCard";
 //images imported before component loads
 import FounderPicture from "../../../public/gonz.jpg";
 //styles
-import styles from "./TeamCardSection.module.css";
+import styles from "./TeamSection.module.css";
+import AboutVideoSection from "./AboutVideoSection";
 
 //create all team members in the array below
 const teamMembers = [
@@ -37,6 +38,7 @@ const TeamCardSection = () => {
   return (
     <>
       <h2 className={styles.header}>Meet The Team</h2>
+      <AboutVideoSection />
       <div className={styles.teamCardSectionContainer}>
         {teamMembers.map((teamMember) => {
           return (

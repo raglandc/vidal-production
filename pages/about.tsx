@@ -1,14 +1,14 @@
 //components
 import AboutIntro from "../components/sections/AboutPageSections/AboutIntroSection";
 import ThreeDSection from "../components/sections/AboutPageSections/threeDSection";
-import TeamCardSection from "../components/sections/AboutPageSections/TeamCardSection";
+import TeamSection from "../components/sections/AboutPageSections/TeamSection";
 
 const AboutPage = () => {
   return (
     <>
       <AboutIntro />
       <ThreeDSection />
-      <TeamCardSection />
+      <TeamSection />
     </>
   );
 };
