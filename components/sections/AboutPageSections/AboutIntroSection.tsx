@@ -22,7 +22,7 @@ const AboutIntro = () => {
           </p>
           <div className={styles.sig}>
             <Image src={SigSvg} alt="president sig for design" />
-            <div className={styles.president}>Founder</div>
+            <div className={styles.president}>President</div>
           </div>
         </div>
       </div>
