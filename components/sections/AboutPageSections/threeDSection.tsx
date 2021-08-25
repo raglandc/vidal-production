@@ -8,11 +8,11 @@ import LogoSvg from "../../../public/vidalWhite.svg";
 import styles from "./threeDSection.module.css";
 const ThreeDSection = () => {
   const dreamSpring = useSpring({
-    delay: 3000,
+    delay: 2900,
     loop: { reverse: true },
     from: { color: "#FFF" },
     to: { color: "#DB2777" },
-    config: { duration: 500 },
+    config: { duration: 600 },
   });
 
   const designSpring = useSpring({
@@ -20,14 +20,14 @@ const ThreeDSection = () => {
     loop: { reverse: true },
     from: { color: "#fff" },
     to: { color: "#2563EB" },
-    config: { duration: 550 },
+    config: { duration: 500 },
   });
   const developeSpring = useSpring({
-    delay: 3000,
+    delay: 3100,
     loop: { reverse: true },
     from: { color: "#fff" },
     to: { color: "#FBBF24" },
-    config: { duration: 618 },
+    config: { duration: 400 },
   });
 
   return (
