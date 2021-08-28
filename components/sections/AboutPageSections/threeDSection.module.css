@@ -28,24 +28,6 @@
 
 @media only screen and (min-width: 700px) {
   .container {
-    flex-direction: row;
-    font-size: 6.18rem;
+    font-size: 9.18rem;
   }
-  .headers {
-    padding: 0 0 0 15%;
-  }
-  .headerContainer {
-    width: 50%;
-  }
-  .logo {
-    width: 50%;
-    margin: 0;
-  }
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-  transform: translate(-5px);
-  margin: 3rem auto 0 auto;
 }

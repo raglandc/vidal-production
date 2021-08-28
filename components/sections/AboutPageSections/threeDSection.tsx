@@ -1,8 +1,5 @@
 //library
-import Image from "next/image";
 import { useSpring, animated } from "@react-spring/web";
-//local
-import LogoSvg from "../../../public/vidalWhite.svg";
 
 //styles
 import styles from "./threeDSection.module.css";
@@ -43,9 +40,6 @@ const ThreeDSection = () => {
         <animated.h3 style={developeSpring} className={styles.headers}>
           Develope
         </animated.h3>
-      </div>
-      <div className={styles.logo}>
-        <Image src={LogoSvg} alt="logo" width="200.85px" height="325px" />
       </div>
     </div>
   );
