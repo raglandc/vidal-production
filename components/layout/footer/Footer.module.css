@@ -15,6 +15,12 @@
   font-size: 1.618rem;
 }
 
-.sig {
-  margin: 0.618rem auto;
+.icon {
+  margin: 1rem;
+  font-size: 2.5rem;
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: #3b82f6;
 }
