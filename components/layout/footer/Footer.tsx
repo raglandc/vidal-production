@@ -8,15 +8,21 @@ import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div>
+      <div className={styles.icon}>
         <Link href={"https://www.linkedin.com/in/chris-ragland-42461a1b4/"}>
           <a target="_blank">
-            <FontAwesomeIcon className={styles.icon} icon={faLinkedin} />
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              className={`${styles.iconButton} ${styles.icon} `}
+            />
           </a>
         </Link>
         <Link href={"https://github.com/raglandc"}>
           <a target="_blank">
-            <FontAwesomeIcon className={styles.icon} icon={faGithub} />
+            <FontAwesomeIcon
+              className={`${styles.iconButton} ${styles.icon} `}
+              icon={faGithub}
+            />
           </a>
         </Link>
       </div>
