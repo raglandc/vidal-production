@@ -9,9 +9,9 @@ import styles from "./AboutIntroSection.module.css";
 
 const AboutIntro = () => {
   const springStyle = useSpring({
-    from: { opacity: 0, transform: `translateY(1000px)` },
-    to: { opacity: 1, transform: `translateY(0)` },
-    config: { duration: 1000 },
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 1618 },
   });
   return (
     <animated.div style={springStyle} className={styles.pageContainer}>
