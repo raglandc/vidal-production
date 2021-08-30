@@ -1,5 +1,6 @@
 //library imports
 import Image from "next/image";
+import { useSpring, animated } from "@react-spring/web";
 //local imports
 import LogoSvg from "../../../public/vidal.svg";
 import SigSvg from "../../../public/aboutSig.svg";
@@ -7,8 +8,13 @@ import SigSvg from "../../../public/aboutSig.svg";
 import styles from "./AboutIntroSection.module.css";
 
 const AboutIntro = () => {
+  const springStyle = useSpring({
+    from: { opacity: 0, transform: `translateY(1000px)` },
+    to: { opacity: 1, transform: `translateY(0)` },
+    config: { duration: 1000 },
+  });
   return (
-    <div className={styles.pageContainer}>
+    <animated.div style={springStyle} className={styles.pageContainer}>
       <h2 className={styles.pageHeader}>About</h2>
       <div className={styles.introContainer}>
         <div className={styles.logoContainer}>
@@ -26,7 +32,7 @@ const AboutIntro = () => {
           </div>
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 };
 
