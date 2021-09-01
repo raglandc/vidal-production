@@ -5,11 +5,11 @@ import { useSpring, animated } from "@react-spring/web";
 import styles from "./threeDSection.module.css";
 const ThreeDSection = () => {
   const dreamSpring = useSpring({
-    delay: 2900,
+    delay: 3000,
     loop: { reverse: true },
     from: { color: "#FFF" },
     to: { color: "#DB2777" },
-    config: { duration: 600 },
+    config: { duration: 500 },
   });
 
   const designSpring = useSpring({
@@ -20,11 +20,11 @@ const ThreeDSection = () => {
     config: { duration: 500 },
   });
   const developeSpring = useSpring({
-    delay: 3100,
+    delay: 3000,
     loop: { reverse: true },
     from: { color: "#fff" },
     to: { color: "#FBBF24" },
-    config: { duration: 400 },
+    config: { duration: 500 },
   });
 
   return (
