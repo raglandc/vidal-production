@@ -1,29 +1,38 @@
+//library
+import Link from "next/link";
+import Image from "next/image";
 //styles
 
 import styles from "./BlogListItem.module.css";
 
 type BlogListItemProps = {
+  key: Number;
   title: String;
   author: String;
-  date: Date;
+  description: String;
+  date: String;
   readTime: String;
+  //string for now
   image: StaticImageData;
 };
 
-const BlogListItem = () => {
+const BlogListItem = (props: BlogListItemProps) => {
+  //need to create a link that will take current url and add id of specific blog
   return (
-    <div className={styles.blogCard}>
-      <div className={styles.leftSideOfCard}>
-        <h4 className={styles.blogCardTitle}>Title</h4>
-        <span>Author</span>
-        <p className={styles.description}>This is an example description</p>
-        <span>9/4/2021</span>
-        <span>5 min read</span>
-      </div>
-      <div className={styles.rightSideOfCard}>
-        <div>Image Here</div>
-      </div>
-    </div>
+    <Link href={`blog/${props.key}`} passHref>
+      <li className={styles.blogCard}>
+        <div className={styles.leftSideOfCard}>
+          <h4 className={styles.blogCardTitle}>{props.title}</h4>
+          <span className={styles.span}>{props.author}</span>
+          <p className={styles.description}>{props.description}</p>
+          <span className={styles.span}>{props.date}</span>
+          <span className={styles.span}>{props.readTime}</span>
+        </div>
+        <div className={styles.rightSideOfCard}>
+          <Image src={props.image} alt="blog card image" />
+        </div>
+      </li>
+    </Link>
   );
 };
 
