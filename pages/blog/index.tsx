@@ -11,7 +11,7 @@ import styles from "./blogIndex.module.css";
 
 export const blogData = [
   {
-    id: 100,
+    key: "my-first-blog",
     title: "My First Blog",
     author: "Chris Ragland",
     date: "sep. 4th 2021",
@@ -30,7 +30,7 @@ const BlogPage = () => {
         {blogData.map((blog) => {
           return (
             <BlogListItem
-              key={blog.id}
+              key={blog.key}
               title={blog.title}
               author={blog.author}
               date={blog.date}
