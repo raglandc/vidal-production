@@ -1,5 +1,6 @@
 //library
 import Image from "next/image";
+import Link from "next/link";
 
 //temporary imports
 import { blogData } from "../blog/index";
@@ -32,6 +33,9 @@ const BlogPost = () => {
         <span>{blogData[0].readTime}</span>
       </div>
       <div className={styles.blog}>{blogData[0].description}</div>
+      <Link href="/blog">
+        <a className={styles.backToOtherBlogs}>back to other articles</a>
+      </Link>
     </div>
   );
 };

@@ -1,15 +1,29 @@
 //library import
+import { useState, useEffect } from "react";
 
 //componenets
 import BlogListItem from "../../components/UI/BlogListItem";
 import FounderPicture from "../../public/gonz.jpg";
 
 //style import
-import styles from "./blogIndex.module.css";
+import styles from "./BlogIndex.module.css";
+
+type BlogData = [
+  {
+    key: string;
+    title: string;
+    author: string;
+    description: string;
+    date: string;
+    readTime: string;
+    //string for now
+    image: StaticImageData;
+  }
+];
 
 //fake data
 
-export const blogData = [
+export const blogData: BlogData = [
   {
     key: "my-first-blog",
     title: "My First Blog",
@@ -22,12 +36,22 @@ export const blogData = [
 ];
 
 const BlogPage = () => {
+  //use Effect to make Http request
+
+  const [loadedBlogs, setLoadedBlogs] = useState<BlogData[]>([]);
+
+  useEffect(() => {
+    //send http request to database
+
+    //set LoadedBlogs
+    setLoadedBlogs(blogData);
+  }, []);
   return (
     <div className={styles.blogContainer}>
       <h1 className={styles.blogHeader}>Blog Posts</h1>
       <ul className={styles.blogListContainer}>
         {/* isLoading ? isLoadingIcon : display list of blogs from database */}
-        {blogData.map((blog) => {
+        {loadedBlogs.map((blog) => {
           return (
             <BlogListItem
               key={blog.key}

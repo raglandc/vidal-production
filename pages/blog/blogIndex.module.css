@@ -1,5 +1,5 @@
 .blogHeader {
-  font-size: 6.18rem;
+  font-size: 4.18rem;
 }
 
 .blogContainer {
@@ -8,6 +8,6 @@
 }
 
 .blogListContainer {
-  margin: 0;
+  margin: 6rem auto;
   padding: 0;
 }
