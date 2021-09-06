@@ -25,9 +25,10 @@ const BlogListItem = (props: BlogListItemProps) => {
       <li className={styles.blogCard}>
         <div className={styles.leftSideOfCard}>
           <h4 className={styles.blogCardTitle}>{props.title}</h4>
-          <span className={styles.span}>{props.author}</span>
+          <span className={styles.author}>{props.author}</span>
           <p className={styles.description}>{props.description}</p>
           <span className={styles.span}>{props.date}</span>
+          <span className={styles.span}>|</span>
           <span className={styles.span}>{props.readTime}</span>
         </div>
         <div className={styles.rightSideOfCard}>

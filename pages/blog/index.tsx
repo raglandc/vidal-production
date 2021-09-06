@@ -23,7 +23,7 @@ type BlogData = [
 
 //fake data
 
-export const blogData: BlogData = [
+export const blogData = [
   {
     key: "my-first-blog",
     title: "My First Blog",
