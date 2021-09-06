@@ -1,5 +1,6 @@
 //library import
-import { useState, useEffect } from "react";
+
+import { GetStaticProps } from "next";
 
 //componenets
 import BlogListItem from "../../components/UI/BlogListItem";
@@ -36,23 +37,13 @@ export const blogData = [
   },
 ];
 
-const BlogPage = () => {
-  //use Effect to make Http request
-
-  const [loadedBlogs, setLoadedBlogs] = useState<any>([]);
-
-  useEffect(() => {
-    //send http request to database
-
-    //set LoadedBlogs
-    setLoadedBlogs(blogData);
-  }, []);
+const BlogPage = (props: GetStaticProps) => {
   return (
     <div className={styles.blogContainer}>
       <h1 className={styles.blogHeader}>Blog Posts</h1>
       <ul className={styles.blogListContainer}>
         {/* isLoading ? isLoadingIcon : display list of blogs from database */}
-        {loadedBlogs.map((blog: any) => {
+        {props.blogs.map((blog: any) => {
           return (
             <BlogListItem
               key={blog.key}
@@ -70,5 +61,15 @@ const BlogPage = () => {
     </div>
   );
 };
+
+//next js built in static data fetching
+export async function getStaticProps() {
+  //fetch data from an api
+  return {
+    props: {
+      blogs: blogData,
+    },
+  };
+}
 
 export default BlogPage;
