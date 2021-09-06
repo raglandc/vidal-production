@@ -37,7 +37,7 @@ export const blogData = [
   },
 ];
 
-const BlogPage = (props: GetStaticProps) => {
+const BlogPage = (props: any) => {
   return (
     <div className={styles.blogContainer}>
       <h1 className={styles.blogHeader}>Blog Posts</h1>
@@ -63,13 +63,13 @@ const BlogPage = (props: GetStaticProps) => {
 };
 
 //next js built in static data fetching
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   //fetch data from an api
   return {
     props: {
       blogs: blogData,
     },
   };
-}
+};
 
 export default BlogPage;
