@@ -12,15 +12,17 @@ const BlogPage = ({
   blogs,
 }: {
   blogs: {
-    key: number;
+    id: string;
+    key: string;
     title: string;
     author: string;
     date: string;
     readTime: string;
     description: string;
-    image: StaticImageData;
-  };
+    image: string;
+  }[];
 }) => {
+  console.log(blogs);
   return (
     <div className={styles.blogContainer}>
       <h1 className={styles.blogHeader}>Blog Posts</h1>
@@ -29,8 +31,8 @@ const BlogPage = ({
         {blogs.map((blog: any) => {
           return (
             <BlogListItem
-              key={blog.key}
-              url={blog.url}
+              id={blog.id}
+              key={blog.id}
               title={blog.title}
               author={blog.author}
               date={blog.date}
@@ -50,15 +52,17 @@ export const getStaticProps: GetStaticProps = async (context) => {
   //fetch data from an api
   //connect to the database client
   const client = await MongoClient.connect(
-    "mongodb+srv://chris:MaJXk5VM5Xcqp4Ze@cluster0.pl4gf.mongodb.net/blogsCollection?retryWrites=true&w=majority"
+    "mongodb+srv://chris:MaJXk5VM5Xcqp4Ze@vidal.pl4gf.mongodb.net/blogs?retryWrites=true&w=majority"
   );
 
+  //connecting to database and a specific collection
   const db = client.db();
-  const blogCollection = db.collection("blogsCollection");
+  const blogsCollection = db.collection("blogsCollection");
 
   //once connected find
+  const blogs = await blogsCollection.find().toArray();
 
-  const blogs = await blogCollection.find().toArray();
+  console.log(blogs);
 
   //close connection with database
   client.close();

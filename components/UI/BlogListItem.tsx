@@ -6,8 +6,8 @@ import Image from "next/image";
 import styles from "./BlogListItem.module.css";
 
 type BlogListItemProps = {
-  key: number;
-  url: string;
+  id: string;
+  key: string;
   title: string;
   author: string;
   description: string;
@@ -22,7 +22,7 @@ const BlogListItem = (props: BlogListItemProps) => {
 
   return (
     <Link
-      href={{ pathname: "blog/[blogId]", query: { blogId: `${props.url}` } }}
+      href={{ pathname: "blog/[blogId]", query: { blogId: `${props.id}` } }}
       passHref
     >
       <li className={styles.blogCard}>
