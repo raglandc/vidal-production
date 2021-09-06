@@ -3,9 +3,6 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-//temporary imports
-import FounderPicture from "../../public/gonz.jpg";
-
 //styles
 import styles from "./BlogPost.module.css";
 
@@ -76,7 +73,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         date: "9.15.2021",
         readTime: "7 min",
         //string for now
-        image: FounderPicture,
+        image: "string for now",
       },
     },
   };
