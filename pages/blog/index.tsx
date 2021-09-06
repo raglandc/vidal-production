@@ -1,59 +1,32 @@
 //library import
-
+import { MongoClient } from "mongodb";
 import { GetStaticProps } from "next";
 
 //componenets
 import BlogListItem from "../../components/UI/BlogListItem";
-import FounderPicture from "../../public/gonz.jpg";
 
 //style import
 import styles from "./BlogIndex.module.css";
 
-type BlogData = [
-  {
-    key: string;
+const BlogPage = ({
+  blogs,
+}: {
+  blogs: {
+    key: number;
     title: string;
     author: string;
-    description: string;
     date: string;
     readTime: string;
-    //string for now
+    description: string;
     image: StaticImageData;
-  }
-];
-
-//fake data
-
-export const blogData = [
-  {
-    key: 1,
-    url: "my_first_blog",
-    title: "My First Blog",
-    author: "Chris Ragland",
-    date: "sep. 4th 2021",
-    description: "an awesome quick read about my first blog!",
-    readTime: "5 min read",
-    image: FounderPicture,
-  },
-  {
-    key: 2,
-    url: "my_second_blog",
-    title: "My Second Blog",
-    author: "Chris Ragland",
-    date: "sep. 5th 2021",
-    description: "an awesome quick read about my second blog!",
-    readTime: "7 min read",
-    image: FounderPicture,
-  },
-];
-
-const BlogPage = (props: any) => {
+  };
+}) => {
   return (
     <div className={styles.blogContainer}>
       <h1 className={styles.blogHeader}>Blog Posts</h1>
       <ul className={styles.blogListContainer}>
         {/* isLoading ? isLoadingIcon : display list of blogs from database */}
-        {props.blogs.map((blog: any) => {
+        {blogs.map((blog: any) => {
           return (
             <BlogListItem
               key={blog.key}
@@ -73,11 +46,34 @@ const BlogPage = (props: any) => {
 };
 
 //next js built in static data fetching
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async (context) => {
   //fetch data from an api
+  //connect to the database client
+  const client = await MongoClient.connect(
+    "mongodb+srv://chris:chris@cluster0.pl4gf.mongodb.net/blogsCollection?retryWrites=true&w=majority"
+  );
+
+  const db = client.db();
+  const blogCollection = db.collection("blogsCollection");
+
+  //once connected find
+
+  const blogs = await blogCollection.find().toArray();
+
+  //close connection with database
+  client.close();
+
   return {
     props: {
-      blogs: blogData,
+      blogs: blogs.map((blog) => ({
+        title: blog.title,
+        author: blog.author,
+        date: blog.string,
+        readTime: blog.readTime,
+        description: blog.description,
+        image: blog.image,
+        id: blog._id.toString(),
+      })),
     },
   };
 };

@@ -1,9 +1,8 @@
 //library
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
-//styles
 
+//styles
 import styles from "./BlogListItem.module.css";
 
 type BlogListItemProps = {
