@@ -19,7 +19,7 @@ const BlogPage = ({
     date: string;
     readTime: string;
     description: string;
-    image: string;
+    image: StaticImageData;
   }[];
 }) => {
   console.log(blogs);
@@ -72,7 +72,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       blogs: blogs.map((blog) => ({
         title: blog.title,
         author: blog.author,
-        date: blog.string,
+        date: blog.date,
         readTime: blog.readTime,
         description: blog.description,
         image: blog.image,

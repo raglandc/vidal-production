@@ -16,6 +16,7 @@
 }
 
 .rightSideOfCard {
+  position: relative;
   width: 30%;
   height: 100%;
 }
