@@ -35,6 +35,16 @@ export const blogData = [
     readTime: "5 min read",
     image: FounderPicture,
   },
+  {
+    key: 2,
+    url: "my_second_blog",
+    title: "My Second Blog",
+    author: "Chris Ragland",
+    date: "sep. 5th 2021",
+    description: "an awesome quick read about my second blog!",
+    readTime: "7 min read",
+    image: FounderPicture,
+  },
 ];
 
 const BlogPage = (props: any) => {
