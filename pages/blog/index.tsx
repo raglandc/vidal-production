@@ -25,7 +25,8 @@ type BlogData = [
 
 export const blogData = [
   {
-    key: "my-first-blog",
+    key: 1,
+    url: "my_first_blog",
     title: "My First Blog",
     author: "Chris Ragland",
     date: "sep. 4th 2021",
@@ -55,6 +56,7 @@ const BlogPage = () => {
           return (
             <BlogListItem
               key={blog.key}
+              url={blog.url}
               title={blog.title}
               author={blog.author}
               date={blog.date}

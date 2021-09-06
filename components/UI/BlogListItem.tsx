@@ -7,7 +7,8 @@ import { useRouter } from "next/router";
 import styles from "./BlogListItem.module.css";
 
 type BlogListItemProps = {
-  key: string;
+  key: number;
+  url: string;
   title: string;
   author: string;
   description: string;
@@ -21,7 +22,10 @@ const BlogListItem = (props: BlogListItemProps) => {
   //need to create a link that will take current url and add id of specific blog
 
   return (
-    <Link href={"blog/" + props.key} passHref>
+    <Link
+      href={{ pathname: "blog/[blogId]", query: { blogId: `${props.url}` } }}
+      passHref
+    >
       <li className={styles.blogCard}>
         <div className={styles.leftSideOfCard}>
           <h4 className={styles.blogCardTitle}>{props.title}</h4>
