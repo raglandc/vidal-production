@@ -38,7 +38,7 @@ export const blogData = [
 const BlogPage = () => {
   //use Effect to make Http request
 
-  const [loadedBlogs, setLoadedBlogs] = useState<BlogData[]>([]);
+  const [loadedBlogs, setLoadedBlogs] = useState<any>([]);
 
   useEffect(() => {
     //send http request to database
@@ -51,7 +51,7 @@ const BlogPage = () => {
       <h1 className={styles.blogHeader}>Blog Posts</h1>
       <ul className={styles.blogListContainer}>
         {/* isLoading ? isLoadingIcon : display list of blogs from database */}
-        {loadedBlogs.map((blog) => {
+        {loadedBlogs.map((blog: any) => {
           return (
             <BlogListItem
               key={blog.key}
