@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   //fetch data from an api
   //connect to the database client
   const client = await MongoClient.connect(
-    "mongodb+srv://chris:chris@cluster0.pl4gf.mongodb.net/blogsCollection?retryWrites=true&w=majority"
+    "mongodb+srv://chris:MaJXk5VM5Xcqp4Ze@cluster0.pl4gf.mongodb.net/blogsCollection?retryWrites=true&w=majority"
   );
 
   const db = client.db();

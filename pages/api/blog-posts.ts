@@ -22,7 +22,7 @@ export default async function handler(
     //get all blogs
 
     const client = await MongoClient.connect(
-      "mongodb+srv://chris:chris@cluster0.pl4gf.mongodb.net/blogsCollction?retryWrites=true&w=majority"
+      "mongodb+srv://chris:MaJXk5VM5Xcqp4Ze@cluster0.pl4gf.mongodb.net/blogsCollction?retryWrites=true&w=majority"
     );
 
     const db = client.db();
