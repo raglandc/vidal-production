@@ -1,7 +1,7 @@
 //local imports
 import TeamCard from "./AboutPageComponents/TeamCard";
 //images imported before component loads
-import FounderPicture from "../../../public/gonz.jpg";
+import FounderPicture from "../../../public/images/posts/getting-started-writing-blogs/getting-started-writing-blogs.jpg";
 //styles
 import styles from "./TeamSection.module.css";
 import AboutVideoSection from "./AboutVideoSection";

@@ -44,3 +44,13 @@ export function getFeaturedPosts() {
 
   return featuredPosts;
 }
+
+//function that i made without the video
+export function getPost(postTitle: string) {
+  const allPosts = getAllPosts();
+
+  //filter all posts untill we find the post for this card
+  const post = allPosts.filter((post) => post.slug === postTitle);
+
+  return post;
+}

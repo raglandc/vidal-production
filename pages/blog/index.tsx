@@ -21,7 +21,6 @@ const BlogPage = ({
     image: string;
   }[];
 }) => {
-  console.log(allPosts);
   return (
     <div className={styles.blogContainer}>
       <h1 className={styles.blogHeader}>Blog Posts</h1>
@@ -31,10 +30,11 @@ const BlogPage = ({
           return (
             <BlogListItem
               key={post.title}
+              slug={post.slug}
               title={post.title}
               author={post.author}
               date={post.date}
-              description={post.excerpt}
+              excerpt={post.excerpt}
               image={post.image}
               readTime={post.readTime}
             />

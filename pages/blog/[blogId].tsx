@@ -1,36 +1,35 @@
 //library
 import { GetStaticProps, GetStaticPaths } from "next";
-import Image from "next/image";
 import Link from "next/link";
+
+//local imports
+import { getAllPosts, getPost } from "../../lib/posts-util";
 
 //styles
 import styles from "./BlogPost.module.css";
 
 const BlogPost = ({
-  postData,
+  post,
 }: {
-  postData: {
-    key: number;
+  post: {
+    key: string;
+    slug: string;
     title: string;
     author: string;
     date: string;
     readTime: string;
-    description: string;
-    image: StaticImageData;
+    excerpt: string;
+    image: string;
   };
 }) => {
   return (
     <div className={styles.blogContainer}>
-      <div className={styles.image}>
-        <Image src={postData.image} alt="blog image" />
-      </div>
       <div>
-        <h2>{postData.title}</h2>
-        <span>{postData.author}</span>
-        <span>{postData.date}</span>
-        <span>{postData.readTime}</span>
+        <h2>{post.title}</h2>
+        <span>{post.author}</span>
+        <span>{post.date}</span>
+        <span>{post.readTime}</span>
       </div>
-      <div className={styles.blog}>{postData.description}</div>
       <Link href="/blog">
         <a className={styles.backToOtherBlogs}>back to other articles</a>
       </Link>
@@ -45,12 +44,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: [
       {
         params: {
-          blogId: "my_first_blog",
-        },
-      },
-      {
-        params: {
-          blogId: "my_second_blog",
+          blogId: post.slug,
         },
       },
     ],
@@ -58,24 +52,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 //dynamically fetch data and return data as props from server
+//next js built in static data fetching
 export const getStaticProps: GetStaticProps = async (context) => {
-  const blogId = context.params!.blogId;
-  console.log(blogId);
+  //fetch data from an api
+
+  const allPosts = getAllPosts();
+
+  const post = getPost();
+
   return {
     props: {
-      postData: {
-        key: 1,
-        id: "my_first_blog",
-        title: "My First Blog",
-        author: "Chris Ragland",
-        description:
-          "This is just a short description of the great things coming.",
-        date: "9.15.2021",
-        readTime: "7 min",
-        //string for now
-        image: "string for now",
-      },
+      allPosts: post,
     },
+    revalidate: 3600,
   };
 };
 

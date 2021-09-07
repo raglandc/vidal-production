@@ -1,5 +1,6 @@
 ---
 title: "Writing Blogs With Next.Js"
+url: "writing-blogs-with-nextjs"
 date: "Sept. 6th 2021"
 author: "Chris Ragland"
 readTime: "7 min"
