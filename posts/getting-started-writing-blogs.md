@@ -9,4 +9,13 @@ excerpt: "NextJS is a react framework that shines both client and server-side. N
 isFeatured: true
 ---
 
+### Working with markdown to jsx
+
+just testing to see if things are working with this.
+
+    Things to keep in mind...
+
+```
+
 This is some regular text with a [link](https://google.com)
+```

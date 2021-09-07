@@ -2,6 +2,7 @@
 import { ParsedUrlQuery } from "querystring";
 import { GetStaticProps, GetStaticPaths } from "next";
 import Link from "next/link";
+import Markdown from "markdown-to-jsx";
 
 //local imports
 import { getPostData, getPostFiles } from "../../lib/posts-util";
@@ -20,6 +21,7 @@ const BlogPost = ({
     date: string;
     readTime: string;
     excerpt: string;
+    content: string;
     image: string;
   };
 }) => {
@@ -34,6 +36,7 @@ const BlogPost = ({
         </div>
       </div>
       {/* markdown component goes here */}
+      <Markdown>{post.content}</Markdown>
       <Link href="/blog">
         <a className={styles.backToOtherBlogs}>&larr; back to other articles</a>
       </Link>
@@ -74,7 +77,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       post: post,
     },
-    revalidate: 3600,
   };
 };
 
