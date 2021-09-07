@@ -3,6 +3,7 @@
   min-height: 100vh;
   margin: 6.18rem auto;
   font-size: 1.618rem;
+  line-height: 1.5;
 }
 
 .blogTitle {
@@ -26,9 +27,10 @@
 }
 
 .backToOtherBlogs {
+  width: max-content;
   color: #fff;
   padding: 1rem;
-  margin: 2rem 0 0 0;
+  margin: 4rem 0 0 0;
   border-radius: 8px;
   background: #111;
 }

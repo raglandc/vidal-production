@@ -7,6 +7,7 @@ import Markdown from "markdown-to-jsx";
 
 //local imports
 import { getPostData, getPostFiles } from "../../lib/posts-util";
+import ImageDiv from "../../components/UI/ImageDiv";
 
 //styles
 import styles from "./BlogPost.module.css";
@@ -43,14 +44,17 @@ const BlogPost = ({
             img: {
               component: Image,
             },
+            div: {
+              component: ImageDiv,
+            },
           },
         }}
       >
         {post.content}
       </Markdown>
-      <Link href="/blog">
-        <a className={styles.backToOtherBlogs}>&larr; back to other articles</a>
-      </Link>
+      <div className={styles.backToOtherBlogs}>
+        <Link href="/blog">&larr; back to other articles</Link>
+      </div>
     </div>
   );
 };

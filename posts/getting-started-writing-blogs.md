@@ -4,15 +4,21 @@ url: "how-to-use-next/image-with-markdown-to-jsx"
 date: "Sept. 6th 2021"
 author: "Chris Ragland"
 readTime: "7 min"
-image: /getting-started-writing-blogs.jpg
+image: /../public/images/posts/getting-started-writing-blogs/imageBlog.jpg
 excerpt: "NextJS is a react framework that shines both client and server-side. Now lets write some blogs with it!"
 isFeatured: true
 ---
 
-## Working with markdown to jsx
+<div>
+<img width={1920} height={1080} src={/../public/images/posts/getting-started-writing-blogs/imageBlog.jpg}>
+</div>
 
-Just testing to see if things are working with this.
+## The problem I came across
 
-<img width={314} height={314} src={/../public/images/posts/getting-started-writing-blogs/getting-started-writing-blogs.jpg}>
+I have built my website, the one you are probably reading this on, with nextJS and Typescript. Instead of storing my blog articles in a database I store them locally in markdown files.
+
+One of the amazing features of Next, is it comes with a few pre-built components.
+
+The one I will use today is the Image component.
 
 This is some regular text with a [link](https://google.com)
