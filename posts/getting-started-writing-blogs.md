@@ -10,7 +10,7 @@ isFeatured: true
 ---
 
 <div>
-<img width={1920} height={1080} src={/../public/images/posts/getting-started-writing-blogs/imageBlog.jpg}>
+<img width={1080} height={720} src={/../public/images/posts/getting-started-writing-blogs/imageBlog.jpg}>
 </div>
 
 ## The problem I came across
