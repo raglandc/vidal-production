@@ -5,7 +5,6 @@
   min-height: 15rem;
   border-radius: 5px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   box-shadow: 0rem 0.1rem 0.618rem #6b7280;
 }
@@ -18,16 +17,10 @@
   box-shadow: 0rem 0.1rem 0.618rem #6b7280;
 }
 
-.leftSideOfCard {
-  width: 70%;
+.contentsOfCard {
+  width: 90%;
   height: 100%;
   margin: 0 0 0 1.618rem;
-}
-
-.rightSideOfCard {
-  position: relative;
-  width: 30%;
-  height: 100%;
 }
 
 .blogCardTitle {

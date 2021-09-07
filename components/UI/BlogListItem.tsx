@@ -25,16 +25,13 @@ const BlogListItem = (props: BlogListItemProps) => {
       passHref
     >
       <li className={styles.blogCard}>
-        <div className={styles.leftSideOfCard}>
+        <div className={styles.contentsOfCard}>
           <h4 className={styles.blogCardTitle}>{props.title}</h4>
           <span className={styles.author}>{props.author}</span>
           <p className={styles.description}>{props.excerpt}</p>
           <span className={styles.span}>{props.date}</span>
           <span className={styles.span}>|</span>
           <span className={styles.span}>{props.readTime} read</span>
-        </div>
-        <div className={styles.rightSideOfCard}>
-          <Image src={props.image} alt={props.title} layout="fill" />
         </div>
       </li>
     </Link>
