@@ -33,6 +33,7 @@ const BlogPost = ({
         <p className={styles.blogAuthor}>{post.author}</p>
         <div className={styles.blogInfo}>
           <p>{post.date}</p>
+          <p>|</p>
           <p>{post.readTime} read</p>
         </div>
       </div>

@@ -6,13 +6,13 @@
 }
 
 .blogTitle {
-  font-size: 3.14rem;
+  font-size: 4rem;
   margin: 3.14rem auto 0 auto;
 }
 
 .blogAuthor {
   color: #6b7280;
-  margin: 0;
+  margin: 2rem 2rem 0 0;
 }
 
 .blogInfo {
@@ -22,7 +22,7 @@
 }
 
 .blogInfo p {
-  margin: 0 1rem 1.618rem 0;
+  margin: 1rem 2rem 2rem 0;
 }
 
 .backToOtherBlogs {
@@ -31,4 +31,10 @@
   margin: 2rem 0 0 0;
   border-radius: 8px;
   background: #111;
+}
+
+@media only screen and (min-width: 700px) {
+  .blogContainer {
+    width: 65%;
+  }
 }

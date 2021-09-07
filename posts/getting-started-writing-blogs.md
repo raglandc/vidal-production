@@ -1,6 +1,6 @@
 ---
-title: "Writing Blogs With Next.Js"
-url: "writing-blogs-with-nextjs"
+title: "How to use next/image with markdown-to-jsx"
+url: "how-to-use-next/image-with-markdown-to-jsx"
 date: "Sept. 6th 2021"
 author: "Chris Ragland"
 readTime: "7 min"
@@ -9,7 +9,7 @@ excerpt: "NextJS is a react framework that shines both client and server-side. N
 isFeatured: true
 ---
 
-### Working with markdown to jsx
+## Working with markdown to jsx
 
 Just testing to see if things are working with this.
 
