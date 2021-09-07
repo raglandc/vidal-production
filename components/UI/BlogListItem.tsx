@@ -34,7 +34,7 @@ const BlogListItem = (props: BlogListItemProps) => {
           <span className={styles.span}>{props.readTime} read</span>
         </div>
         <div className={styles.rightSideOfCard}>
-          <Image src={props.image} alt="blog card image" layout="fill" />
+          <Image src={props.image} alt={props.title} layout="fill" />
         </div>
       </li>
     </Link>

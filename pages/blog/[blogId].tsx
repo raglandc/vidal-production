@@ -2,6 +2,7 @@
 import { ParsedUrlQuery } from "querystring";
 import { GetStaticProps, GetStaticPaths } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Markdown from "markdown-to-jsx";
 
 //local imports
@@ -35,8 +36,17 @@ const BlogPost = ({
           <p>{post.readTime} read</p>
         </div>
       </div>
-      {/* markdown component goes here */}
-      <Markdown>{post.content}</Markdown>
+      <Markdown
+        options={{
+          overrides: {
+            img: {
+              component: Image,
+            },
+          },
+        }}
+      >
+        {post.content}
+      </Markdown>
       <Link href="/blog">
         <a className={styles.backToOtherBlogs}>&larr; back to other articles</a>
       </Link>

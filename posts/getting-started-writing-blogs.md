@@ -11,11 +11,8 @@ isFeatured: true
 
 ### Working with markdown to jsx
 
-just testing to see if things are working with this.
+Just testing to see if things are working with this.
 
-    Things to keep in mind...
-
-```
+<img width={314} height={314} src={/../public/images/posts/getting-started-writing-blogs/getting-started-writing-blogs.jpg}>
 
 This is some regular text with a [link](https://google.com)
-```
