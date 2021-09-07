@@ -9,6 +9,14 @@
   align-items: center;
   box-shadow: 0rem 0.1rem 0.618rem #6b7280;
 }
+.blogCard:hover {
+  cursor: pointer;
+  box-shadow: 0rem 0.1rem 0.886rem #6b7280;
+}
+.blogCard:active {
+  cursor: pointer;
+  box-shadow: 0rem 0.1rem 0.618rem #6b7280;
+}
 
 .leftSideOfCard {
   width: 70%;

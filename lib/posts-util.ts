@@ -6,13 +6,17 @@ import path from "path";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
-export function getPostData(fileName: string) {
-  const filePath = path.join(postsDirectory, fileName);
+export function getPostFiles() {
+  return fs.readdirSync(postsDirectory);
+}
+
+export function getPostData(singlePost: string) {
+  const postSlug = singlePost.replace(/\.md$/, ""); //removes file extension
+
+  const filePath = path.join(postsDirectory, `${postSlug}.md`);
   const fileContent = fs.readFileSync(filePath, "utf-8");
 
   const { data, content } = matter(fileContent);
-
-  const postSlug = fileName.replace(/\.md$/, ""); //removes file extension
 
   const postData = {
     slug: postSlug,
@@ -24,7 +28,7 @@ export function getPostData(fileName: string) {
 }
 
 export function getAllPosts() {
-  const postFiles = fs.readdirSync(postsDirectory);
+  const postFiles = getPostFiles();
 
   const allPosts = postFiles.map((postFile) => {
     return getPostData(postFile);
@@ -43,14 +47,4 @@ export function getFeaturedPosts() {
   const featuredPosts = allPosts.filter((post: any) => post.isFeatured);
 
   return featuredPosts;
-}
-
-//function that i made without the video
-export function getPost(postTitle: string) {
-  const allPosts = getAllPosts();
-
-  //filter all posts untill we find the post for this card
-  const post = allPosts.filter((post) => post.slug === postTitle);
-
-  return post;
 }

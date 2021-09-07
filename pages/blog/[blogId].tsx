@@ -1,9 +1,10 @@
 //library
+import { ParsedUrlQuery } from "querystring";
 import { GetStaticProps, GetStaticPaths } from "next";
 import Link from "next/link";
 
 //local imports
-import { getAllPosts, getPost } from "../../lib/posts-util";
+import { getPostData, getPostFiles } from "../../lib/posts-util";
 
 //styles
 import styles from "./BlogPost.module.css";
@@ -25,13 +26,16 @@ const BlogPost = ({
   return (
     <div className={styles.blogContainer}>
       <div>
-        <h2>{post.title}</h2>
-        <span>{post.author}</span>
-        <span>{post.date}</span>
-        <span>{post.readTime}</span>
+        <h2 className={styles.blogTitle}>{post.title}</h2>
+        <p className={styles.blogAuthor}>{post.author}</p>
+        <div className={styles.blogInfo}>
+          <p>{post.date}</p>
+          <p>{post.readTime} read</p>
+        </div>
       </div>
+      {/* markdown component goes here */}
       <Link href="/blog">
-        <a className={styles.backToOtherBlogs}>back to other articles</a>
+        <a className={styles.backToOtherBlogs}>&larr; back to other articles</a>
       </Link>
     </div>
   );
@@ -39,30 +43,36 @@ const BlogPost = ({
 
 //dynamically rendering paths with next js
 export const getStaticPaths: GetStaticPaths = async () => {
+  const postFileNames = getPostFiles();
+
+  const blogs = postFileNames.map((fileName) => fileName.replace(/\.md$/, ""));
+
+  const paths = blogs.map((blogId: string) => ({ params: { blogId: blogId } }));
+
   return {
     fallback: false,
-    paths: [
-      {
-        params: {
-          blogId: post.slug,
-        },
-      },
-    ],
+    paths,
   };
 };
+
+//define type so slug exsists on params
+interface IParams extends ParsedUrlQuery {
+  slug: string;
+}
 
 //dynamically fetch data and return data as props from server
 //next js built in static data fetching
 export const getStaticProps: GetStaticProps = async (context) => {
   //fetch data from an api
+  const { params } = context;
 
-  const allPosts = getAllPosts();
+  const { blogId } = params as IParams;
 
-  const post = getPost();
+  const post = getPostData(blogId as string);
 
   return {
     props: {
-      allPosts: post,
+      post: post,
     },
     revalidate: 3600,
   };
