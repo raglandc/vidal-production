@@ -13,7 +13,6 @@ type BlogListItemProps = {
   date: string;
   readTime: string;
   excerpt: string;
-  image: string;
 };
 
 const BlogListItem = (props: BlogListItemProps) => {

@@ -18,7 +18,6 @@ const BlogPage = ({
     date: string;
     readTime: string;
     excerpt: string;
-    image: string;
   }[];
 }) => {
   return (
@@ -35,7 +34,6 @@ const BlogPage = ({
               author={post.author}
               date={post.date}
               excerpt={post.excerpt}
-              image={post.image}
               readTime={post.readTime}
             />
           );
