@@ -1,10 +1,11 @@
 .container {
   margin-top: 6.18rem;
-  height: 94vh;
+  height: 90vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .titleWrapper {
@@ -19,7 +20,7 @@
 .title {
   margin: 0 0 1rem 0;
   color: #111;
-  font-size: 6rem;
+  font-size: 8rem;
   opacity: 1;
   transition: opacity 1618ms ease-in, transform 1000ms ease-out;
 }
@@ -30,6 +31,7 @@
 
 .subHeading {
   color: #6b7280;
+  text-align: center;
   font-size: 2rem;
   margin: 0 0 3.618rem 0;
   opacity: 1;
@@ -40,13 +42,16 @@
   margin: 0 0 3.14rem 0;
 }
 
+.buttonContainer {
+  text-align: center;
+}
+
 @media only screen and (min-width: 700px) {
   .container {
     align-items: center;
   }
 
   .subHeading {
-    text-align: left;
     font-size: 2rem;
   }
 

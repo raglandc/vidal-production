@@ -24,11 +24,11 @@ const BannerSection = () => {
         ref={ref}
         className={isVisible ? styles.subHeading : styles.subHeadingStart}
       >
-        <h4 className={styles.subHeading__text}>
+        <p className={styles.subHeading__text}>
           A powerful online presence is important.
-        </h4>
-        <h4 className={styles.subHeading__text}>These days, its vital.</h4>
-        <h4 className={styles.subHeading__text}>Meet Vidal.</h4>
+        </p>
+        <p className={styles.subHeading__text}>These days, its vital.</p>
+        <p className={styles.subHeading__text}>Meet Vidal.</p>
       </div>
       <div className={styles.buttonContainer}>
         <Button link="/about" title="Learn More" style="hollow" />
