@@ -19,24 +19,24 @@
 .title {
   margin: 0 0 1rem 0;
   color: #111;
-  font-size: 9rem;
+  font-size: 6rem;
   opacity: 1;
   transition: opacity 1618ms ease-in, transform 1000ms ease-out;
 }
 
-.pStart {
+.subHeadingStart {
   opacity: 0;
 }
 
-.p {
+.subHeading {
   color: #6b7280;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0 0 3.618rem 0;
   opacity: 1;
   transition: opacity 1618ms ease-in-out;
 }
 
-.p__text {
+.subHeading__text {
   margin: 0 0 3.14rem 0;
 }
 
@@ -45,12 +45,12 @@
     align-items: center;
   }
 
-  .p {
-    text-align: center;
-    font-size: 4rem;
+  .subHeading {
+    text-align: left;
+    font-size: 2rem;
   }
 
   .title {
-    font-size: 15rem;
+    font-size: 8rem;
   }
 }

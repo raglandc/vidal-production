@@ -20,14 +20,17 @@ const BannerSection = () => {
           Vidal
         </h1>
       </div>
-      <div ref={ref} className={isVisible ? styles.p : styles.pStart}>
-        <p className={styles.p__text}>
+      <div
+        ref={ref}
+        className={isVisible ? styles.subHeading : styles.subHeadingStart}
+      >
+        <h4 className={styles.subHeading__text}>
           A powerful online presence is important.
-        </p>
-        <p className={styles.p__text}>These days, its vital.</p>
-        <p className={styles.p__text}>Meet Vidal.</p>
+        </h4>
+        <h4 className={styles.subHeading__text}>These days, its vital.</h4>
+        <h4 className={styles.subHeading__text}>Meet Vidal.</h4>
       </div>
-      <div>
+      <div className={styles.buttonContainer}>
         <Button link="/about" title="Learn More" style="hollow" />
         <Button link="/contact" title="Contact" style="solid" />
       </div>
