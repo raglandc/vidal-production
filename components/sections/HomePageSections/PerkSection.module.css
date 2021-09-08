@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+  .container {
+    display: flex;
+    height: max-content;
+  }
+}

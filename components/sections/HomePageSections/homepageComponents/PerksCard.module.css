@@ -4,12 +4,12 @@
 
 .card {
   width: 90%;
-  height: 30%;
-  margin: 3.14rem auto;
-  padding: 0 2.618rem;
+  margin: 3.14rem 1rem;
+  padding: 1rem 2.618rem;
   display: flex;
   flex-direction: column;
   text-align: center;
+  box-shadow: 0 0 1.62px #6b7280;
 
   opacity: 1;
 
@@ -22,13 +22,12 @@
 
 .title {
   margin-bottom: 0;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .description {
-  text-indent: 10%;
   color: #6b7280;
-  font-size: 2.14rem;
+  font-size: 1.618rem;
   line-height: 2.618rem;
-  text-align: left;
+  text-align: center;
 }

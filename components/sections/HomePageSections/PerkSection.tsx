@@ -1,9 +1,11 @@
-//components
+//local
 import PerksCard from "./homepageComponents/PerksCard";
 import fast from "../../../public/fast.svg";
 import seo from "../../../public/seo.svg";
 import responsive from "../../../public/responsive.svg";
-import SectionWrapper from "../../UI/SectionWrapper";
+
+//styles
+import styles from "./PerkSection.module.css";
 
 const cards: {
   key: string;
@@ -36,7 +38,7 @@ const cards: {
 
 const PerkSection = () => {
   return (
-    <SectionWrapper>
+    <div className={styles.container}>
       {cards.map((card) => {
         return (
           <PerksCard
@@ -47,7 +49,7 @@ const PerkSection = () => {
           />
         );
       })}
-    </SectionWrapper>
+    </div>
   );
 };
 

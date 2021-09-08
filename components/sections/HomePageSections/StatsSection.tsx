@@ -1,4 +1,4 @@
-import SectionWrapper from "../../UI/SectionWrapper";
+//local
 import StatsCard from "./homepageComponents/StatsCard";
 
 //styles
@@ -28,7 +28,7 @@ const StatsSection = () => {
   return (
     <>
       <h2 className={styles.statsHeader}>Stats.</h2>
-      <SectionWrapper>
+      <div className={styles.listContainer}>
         {stats.map((stat) => {
           return (
             <StatsCard
@@ -38,7 +38,7 @@ const StatsSection = () => {
             />
           );
         })}
-      </SectionWrapper>
+      </div>
     </>
   );
 };
