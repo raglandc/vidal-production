@@ -1,3 +1,14 @@
 .statsHeader {
   font-size: 6.18rem;
 }
+
+.listContainer {
+  width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+  .listContainer {
+    display: flex;
+    height: max-content;
+  }
+}
