@@ -34,9 +34,6 @@ const ContactForm = () => {
       console.log(values);
       actions.resetForm();
     },
-    onReset: (actions) => {
-      actions.resetForm();
-    },
   });
 
   return (
@@ -98,8 +95,7 @@ const ContactForm = () => {
         <button
           className={`${styles.formButton} ${styles.formButtonReset}`}
           type="reset"
-          //   trying to get reset button to work
-          onClick={() => resetForm}
+          onClick={() => formik.resetForm()}
         >
           Reset
         </button>
