@@ -24,26 +24,45 @@
 .errorMessage {
   color: red;
   margin: 1rem 0;
+  align-self: flex-end;
 }
 
 .formButton {
   width: 13rem;
   height: 4rem;
   border: none;
-  margin: 1rem 0;
+  margin: 1rem 2rem 1rem 0;
   border-radius: 6.18px;
   font-size: 1.618rem;
-  color: #fff;
-  background-color: #2563eb;
-  box-shadow: 0rem 0.1rem 0.618rem #6b7280;
 }
 
-.formButton:hover {
+.formButtonSubmit {
+  color: #fff;
+  box-shadow: 0rem 0.1rem 0.618rem #6b7280;
+  background-color: #2563eb;
+}
+
+.formButtonSubmit:hover {
   background-color: #3b82f6;
   box-shadow: 0rem 0.2rem 0.886rem #6b7280;
   cursor: pointer;
   transition: all 100ms ease-out;
 }
-.formButton:active {
+.formButtonSubmit:active {
   box-shadow: 0rem 0.06rem 0.618rem #6b7280;
+}
+
+/* reset button styles */
+.formButtonReset {
+  border: 2px solid #111;
+  color: #111;
+  background-color: transparent;
+}
+.formButtonReset:hover {
+  border: none;
+  color: #fff;
+  background-color: #111;
+  box-shadow: 0rem 0.2rem 0.886rem #6b7280;
+  cursor: pointer;
+  transition: all 100ms ease-out;
 }

@@ -1,4 +1,5 @@
 //library
+import { faAcquisitionsIncorporated } from "@fortawesome/free-brands-svg-icons";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -29,8 +30,12 @@ const ContactForm = () => {
         .min(1, "Please describe how Vidal can help you")
         .required("Required"),
     }),
-    onSubmit: (values) => {
+    onSubmit: (values, actions) => {
       console.log(values);
+      actions.resetForm();
+    },
+    onReset: (actions) => {
+      actions.resetForm();
     },
   });
 
@@ -83,9 +88,22 @@ const ContactForm = () => {
       {formik.touched.message && formik.errors.message ? (
         <div className={styles.errorMessage}>{formik.errors.message}</div>
       ) : null}
-      <button className={styles.formButton} type="submit">
-        Submit
-      </button>
+      <div>
+        <button
+          className={`${styles.formButton} ${styles.formButtonSubmit}`}
+          type="submit"
+        >
+          Submit
+        </button>
+        <button
+          className={`${styles.formButton} ${styles.formButtonReset}`}
+          type="reset"
+          //   trying to get reset button to work
+          onClick={() => resetForm}
+        >
+          Reset
+        </button>
+      </div>
     </form>
   );
 };
