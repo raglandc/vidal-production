@@ -41,12 +41,14 @@ const BannerSection = () => {
           <Button link="/contact" title="Contact" style="solid" />
         </div>
       </div>
-      <Image
-        src={BannerSvg}
-        alt="personal website cartoon"
-        width={500}
-        height={500}
-      />
+      <div ref={ref} className={isVisible ? styles.svgEnd : styles.svgStart}>
+        <Image
+          src={BannerSvg}
+          alt="personal website cartoon"
+          width={500}
+          height={500}
+        />
+      </div>
     </div>
   );
 };

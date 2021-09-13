@@ -39,7 +39,16 @@
   font-size: 2rem;
   margin: 0 0 3.618rem 0;
   opacity: 1;
-  transition: opacity 1618ms ease-in-out;
+  transition: opacity 1618ms ease-out;
+}
+
+.svgStart {
+  transform: translate(500px);
+  opacity: 0;
+}
+.svgEnd {
+  opacity: 1;
+  transition: opacity 1000ms ease-out, transform 1000ms ease-out;
 }
 
 .subHeading__text {

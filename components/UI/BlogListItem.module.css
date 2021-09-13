@@ -6,6 +6,7 @@
   border-radius: 5px;
   display: flex;
   align-items: center;
+  justify-content: center;
   box-shadow: 0rem 0.1rem 0.618rem #6b7280;
 }
 .blogCard:hover {
@@ -20,7 +21,6 @@
 .contentsOfCard {
   width: 90%;
   height: 100%;
-  margin: 0 0 0 1.618rem;
 }
 
 .blogCardTitle {
