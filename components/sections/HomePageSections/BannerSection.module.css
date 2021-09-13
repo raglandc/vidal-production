@@ -1,14 +1,19 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
   width: 90%;
-  margin: 0 auto;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.divider {
+  margin-bottom: 3rem;
+}
+
 .titleWrapper {
+  text-align: center;
   margin: 0 0 3.14rem;
 }
 
@@ -18,7 +23,6 @@
 }
 
 .title {
-  margin: 0 0 1rem 0;
   color: #111;
   font-size: 8rem;
   opacity: 1;
@@ -50,6 +54,8 @@
   .container {
     width: 60%;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .subHeading {
@@ -58,5 +64,9 @@
 
   .title {
     font-size: 8rem;
+  }
+
+  .divider {
+    margin-right: 3rem;
   }
 }
