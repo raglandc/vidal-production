@@ -1,6 +1,15 @@
 .contactFormSectionContainer {
-  width: 100%;
+  width: 90%;
+  margin: 6.18rem auto;
   height: 90vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
+}
+
+@media only screen and (min-width: 700px) {
+  .contactFormSectionContainer {
+    width: 60%;
+    flex-direction: row;
+  }
 }

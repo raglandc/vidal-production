@@ -4,7 +4,6 @@
   background: #111;
   margin: 8rem auto;
   font-size: 4.9rem;
-  border-radius: 21px;
 
   display: flex;
   flex-direction: column;
@@ -28,7 +27,7 @@
 
 @media only screen and (min-width: 700px) {
   .container {
-    font-size: 9.18rem;
-    width: 80%;
+    font-size: 8.18rem;
+    width: 100%;
   }
 }

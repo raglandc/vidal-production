@@ -1,9 +1,11 @@
 .blogHeader {
   font-size: 4.18rem;
+  color: #111;
 }
 
 .blogContainer {
   min-height: 100vh;
+  width: 90%;
   margin: 6.18rem auto 0 auto;
   margin-top: 6.18rem;
 }
@@ -15,6 +17,6 @@
 
 @media only screen and (min-width: 700px) {
   .blogContainer {
-    width: 90%;
+    width: 60%;
   }
 }

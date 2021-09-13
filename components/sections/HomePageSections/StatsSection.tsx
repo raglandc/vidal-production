@@ -26,7 +26,7 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <>
+    <div className={styles.container}>
       <h2 className={styles.statsHeader}>Stats.</h2>
       <div className={styles.listContainer}>
         {stats.map((stat) => {
@@ -39,7 +39,7 @@ const StatsSection = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

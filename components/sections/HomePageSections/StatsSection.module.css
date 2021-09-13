@@ -1,3 +1,8 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .statsHeader {
   font-size: 6.18rem;
 }
@@ -7,6 +12,9 @@
 }
 
 @media only screen and (min-width: 700px) {
+  .container {
+    width: 60%;
+  }
   .listContainer {
     display: flex;
     height: max-content;

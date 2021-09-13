@@ -36,7 +36,7 @@ const teamMembers = [
 
 const TeamSection = () => {
   return (
-    <>
+    <div className={styles.container}>
       <h2 className={styles.header}>Meet The Team</h2>
       <AboutVideoSection />
       <div className={styles.teamCardSectionContainer}>
@@ -52,7 +52,7 @@ const TeamSection = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 
