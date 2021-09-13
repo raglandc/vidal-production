@@ -4,11 +4,14 @@
 
 .card {
   width: 90%;
-  margin: 3.14rem 1rem;
+  min-height: 40rem;
+  margin: 2rem 1rem;
   padding: 1rem 2.618rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
+  background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 1.62px #6b7280;
 
@@ -31,4 +34,10 @@
   font-size: 1.618rem;
   line-height: 2.618rem;
   text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+  .card {
+    width: 30%;
+  }
 }

@@ -31,7 +31,7 @@ const cards: {
     key: "card-3",
     svgLink: responsive,
     description:
-      "More people use their phone to surf the web than ever, having a website that works on devices of all shapes and sizes is, well, vital. Vidal has you covered.",
+      "More people use their phone to surf the web than ever, having a website that works on devices of all sizes is, well, vital. Vidal has you covered.",
     title: "Responsive",
   },
 ];
