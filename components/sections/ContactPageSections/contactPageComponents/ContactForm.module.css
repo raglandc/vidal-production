@@ -1,37 +1,52 @@
 .formContainer {
   font-size: 1.62rem;
   background: #fff;
-  box-shadow: 0rem 0.1rem 0.618rem #6b7280;
+  /* box-shadow: 0rem 0.1rem 0.618rem #6b7280; */
   border-radius: 8px;
-  min-height: 60%;
-  width: 80%;
+  min-height: max-content;
+  width: 85%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 3rem;
+  /* padding: 3rem; */
 }
 
 .formLabel {
-  margin-bottom: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
 }
 
 .formInput {
   height: 5rem;
   border: none;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   border-bottom: 2px solid #6b7280;
   margin-bottom: 1rem;
 }
+
 .errorMessage {
-  color: red;
-  margin: 1rem 0;
-  align-self: flex-end;
+  width: 100%;
+  background-color: #fee2e2;
+  color: #ef4444;
+  padding: 1rem;
+  text-align: right;
+}
+
+/* buttons */
+
+.buttonContainer {
+  margin: 3rem auto;
+  width: 100%;
 }
 
 .formButton {
   width: 13rem;
   height: 4rem;
   border: none;
-  margin: 1rem 2rem 1rem 0;
+  margin-top: 2rem;
+  margin-right: 1rem;
   border-radius: 6.18px;
   font-size: 1.618rem;
 }
@@ -65,4 +80,14 @@
   box-shadow: 0rem 0.2rem 0.886rem #6b7280;
   cursor: pointer;
   transition: all 100ms ease-out;
+}
+
+@media only screen and (min-width: 700px) {
+  .formContainer {
+    width: 45%;
+  }
+
+  .formInput {
+    width: 90%;
+  }
 }

@@ -85,19 +85,19 @@ const ContactForm = () => {
       {formik.touched.message && formik.errors.message ? (
         <div className={styles.errorMessage}>{formik.errors.message}</div>
       ) : null}
-      <div>
-        <button
-          className={`${styles.formButton} ${styles.formButtonSubmit}`}
-          type="submit"
-        >
-          Submit
-        </button>
+      <div className={styles.buttonContainer}>
         <button
           className={`${styles.formButton} ${styles.formButtonReset}`}
           type="reset"
           onClick={() => formik.resetForm()}
         >
           Reset
+        </button>
+        <button
+          className={`${styles.formButton} ${styles.formButtonSubmit}`}
+          type="submit"
+        >
+          Submit
         </button>
       </div>
     </form>
