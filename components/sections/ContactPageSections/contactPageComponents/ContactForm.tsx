@@ -2,6 +2,8 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
+//local imports
+
 //type
 interface MyFormValues {
   name: string;
@@ -30,10 +32,31 @@ const ContactForm = () => {
         .required("Required"),
     }),
     onSubmit: (values, actions) => {
-      console.log(values);
+      //after the form is submitied i will call an async function
+      //to take the values and send them to google
+      sendEmail(values);
       actions.resetForm();
     },
   });
+
+  //function call to fetch api route
+  const sendEmail = async (values: MyFormValues) => {
+    await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    }).then((res) => {
+      console.log("Response recieved");
+      if (res.status === 200) {
+        console.log(res.status);
+      } else {
+        console.log(res.status, "Somthing went wrong, please try again");
+      }
+    });
+  };
 
   return (
     <form className={styles.formContainer} onSubmit={formik.handleSubmit}>
