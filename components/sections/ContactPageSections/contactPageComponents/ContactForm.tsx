@@ -1,5 +1,4 @@
 //library
-import { faAcquisitionsIncorporated } from "@fortawesome/free-brands-svg-icons";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -38,6 +37,10 @@ const ContactForm = () => {
 
   return (
     <form className={styles.formContainer} onSubmit={formik.handleSubmit}>
+      {/* the below div is for message status */}
+      {formik.errors.name && (
+        <div className={styles.messageStatusSucceed}>{formik.errors.name}</div>
+      )}
       <h1>Contact</h1>
       <label className={styles.formLabel} htmlFor="name">
         Name

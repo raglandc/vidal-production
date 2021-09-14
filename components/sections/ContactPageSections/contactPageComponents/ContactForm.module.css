@@ -33,6 +33,16 @@
   text-align: right;
 }
 
+.messageStatusSucceed {
+  background-color: #ecfdf5;
+
+  width: 90%;
+
+  border-radius: 3px;
+  color: #10b981;
+  padding: 2rem 1rem;
+}
+
 /* buttons */
 
 .buttonContainer {
