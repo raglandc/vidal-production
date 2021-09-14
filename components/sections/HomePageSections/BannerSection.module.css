@@ -59,7 +59,7 @@
   text-align: center;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 1300px) {
   .container {
     width: 60%;
     align-items: center;
@@ -76,6 +76,11 @@
   }
 
   .divider {
-    margin-right: 3rem;
+    width: 50%;
+  }
+
+  .svgEnd {
+    text-align: center;
+    width: 50%;
   }
 }

@@ -9,9 +9,10 @@
 
 .listContainer {
   width: 100%;
+  margin: 0 auto;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 1300px) {
   .container {
     width: 60%;
   }

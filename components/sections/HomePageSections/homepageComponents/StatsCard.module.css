@@ -8,7 +8,7 @@
   min-height: 30rem;
   border-radius: 5px;
   box-shadow: 0 0 1.62px #6b7280;
-  margin: 2rem 1rem;
+  margin: 2rem auto;
   padding: 0 2.5rem;
   text-align: center;
 
@@ -36,9 +36,10 @@
   bottom: 6.18%;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1300px) {
   .card {
+    width: 30%;
     padding: 0 2rem;
-    margin: 8px;
+    margin: 0 auto;
   }
 }

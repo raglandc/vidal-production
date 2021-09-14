@@ -36,7 +36,7 @@
   text-align: center;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 1300px) {
   .card {
     width: 30%;
   }
