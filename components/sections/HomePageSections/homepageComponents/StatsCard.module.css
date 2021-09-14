@@ -5,20 +5,13 @@
 
 .card {
   width: 90%;
-  min-height: 30rem;
-  border-radius: 5px;
-  box-shadow: 0 0 1.62px #6b7280;
+  min-height: 40rem;
   margin: 2rem auto;
   padding: 0 2.5rem;
   text-align: center;
-
-  /* relative to position the author */
-  position: relative;
-
   display: flex;
-  justify-content: center;
-  align-items: center;
-
+  flex-direction: column;
+  justify-content: space-around;
   opacity: 1;
   transition: opacity 1618ms ease-out, transform 1618ms ease-out;
 }
@@ -29,17 +22,31 @@
 }
 
 .source {
+  margin-top: 3rem;
   color: #111;
   font-size: 2rem;
-  position: absolute;
-  right: 6.18%;
-  bottom: 6.18%;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (min-width: 1300px) {
   .card {
-    width: 30%;
+    flex-direction: row;
+    align-items: center;
     padding: 0 2rem;
     margin: 0 auto;
+  }
+
+  .cardText {
+    height: 100%;
+    width: 50%;
+  }
+
+  .svgImage {
+    height: 100%;
+    width: 40%;
   }
 }

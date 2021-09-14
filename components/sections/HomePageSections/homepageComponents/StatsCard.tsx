@@ -1,4 +1,5 @@
 //local imports
+import Image from "next/image";
 import { useRef } from "react";
 import useIntersectionObserver from "../../../../hooks/useIntersectionObserver";
 
@@ -9,6 +10,8 @@ type StatsCardProp = {
   key: string;
   description: string;
   source: string;
+  svgSource: StaticImageData;
+  svgTitle: string;
 };
 
 const StatsCard = (props: StatsCardProp) => {
@@ -18,8 +21,18 @@ const StatsCard = (props: StatsCardProp) => {
 
   return (
     <div ref={ref} className={isVisible ? styles.card : styles.start}>
-      <q className={styles.quote}>{props.description}</q>
-      <span className={styles.source}>{props.source}</span>
+      <div className={styles.cardText}>
+        <q className={styles.quote}>{props.description}</q>
+        <span className={styles.source}>{props.source}</span>
+      </div>
+      <div ref={ref} className={styles.svgImage}>
+        <Image
+          src={props.svgSource}
+          alt={props.svgTitle}
+          width={500}
+          height={500}
+        />
+      </div>
     </div>
   );
 };

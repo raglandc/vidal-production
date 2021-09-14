@@ -5,6 +5,7 @@
 
 .statsHeader {
   font-size: 6.18rem;
+  text-align: center;
 }
 
 .listContainer {
@@ -15,9 +16,5 @@
 @media only screen and (min-width: 1300px) {
   .container {
     width: 60%;
-  }
-  .listContainer {
-    display: flex;
-    height: max-content;
   }
 }
