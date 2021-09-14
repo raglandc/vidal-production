@@ -29,8 +29,8 @@ const StatsCard = (props: StatsCardProp) => {
         <Image
           src={props.svgSource}
           alt={props.svgTitle}
-          width={500}
-          height={500}
+          width={255}
+          height={255}
         />
       </div>
     </div>

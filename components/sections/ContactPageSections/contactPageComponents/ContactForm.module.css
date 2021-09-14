@@ -1,15 +1,12 @@
 .formContainer {
   font-size: 1.62rem;
   background: #fff;
-  /* box-shadow: 0rem 0.1rem 0.618rem #6b7280; */
   border-radius: 8px;
   min-height: max-content;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
-  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
-  /* padding: 3rem; */
 }
 
 .formLabel {
@@ -87,6 +84,7 @@
 @media only screen and (min-width: 700px) {
   .formContainer {
     width: 45%;
+    padding: 1rem 2rem;
   }
 
   .formInput {

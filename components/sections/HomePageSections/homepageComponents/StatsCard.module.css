@@ -34,9 +34,9 @@
 
 @media only screen and (min-width: 1300px) {
   .card {
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
-    padding: 0 2rem;
+    padding: 2rem;
     margin: 0 auto;
   }
 

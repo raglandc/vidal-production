@@ -21,7 +21,7 @@
   }
 
   .introContainer {
-    width: 88%;
+    width: 90%;
   }
 
   .p {
@@ -31,9 +31,6 @@
 
 .introContainer {
   margin: 3rem auto;
-  border-radius: 21px;
-  /* border: 1px solid #6b7280; */
-  background-color: rgba(17, 17, 17, 0.01);
 
   padding: 1rem;
   position: relative;
@@ -57,7 +54,6 @@
 
 .p {
   line-height: 1.618;
-  text-indent: 10%;
   color: #6b7280;
   font-size: 2rem;
   text-align: center;

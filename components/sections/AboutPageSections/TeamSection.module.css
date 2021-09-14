@@ -19,9 +19,6 @@
   .container {
     width: 60%;
   }
-  .teamCardSectionContainer {
-    flex-direction: row;
-  }
   .header {
     font-size: 4rem;
   }
