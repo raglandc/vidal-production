@@ -34,28 +34,28 @@ const ContactForm = () => {
     onSubmit: (values, actions) => {
       //after the form is submitied i will call an async function
       //to take the values and send them to google
-      sendEmail(values);
+      console.log("made it here");
+      apiFetcher(values);
+      //reset form values
       actions.resetForm();
     },
   });
 
-  //function call to fetch api route
-  const sendEmail = async (values: MyFormValues) => {
-    await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
-    }).then((res) => {
-      console.log("Response recieved");
-      if (res.status === 200) {
-        console.log(res.status);
-      } else {
-        console.log(res.status, "Somthing went wrong, please try again");
-      }
-    });
+  const apiFetcher = async (values: MyFormValues) => {
+    const { name, email } = values;
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email }),
+      });
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

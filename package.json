@@ -15,7 +15,6 @@
     "@fortawesome/react-fontawesome": "^0.1.15",
     "@react-spring/web": "^9.2.4",
     "@reduxjs/toolkit": "^1.6.1",
-    "dotenv": "^10.0.0",
     "formik": "^2.2.9",
     "gray-matter": "^4.0.3",
     "markdown-to-jsx": "^7.1.3",
