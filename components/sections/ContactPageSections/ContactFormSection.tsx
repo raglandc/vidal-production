@@ -1,5 +1,6 @@
 //library
 import Image from "next/image";
+import { useSpring, animated } from "@react-spring/web";
 
 //local
 import ContactForm from "./contactPageComponents/ContactForm";
@@ -9,9 +10,18 @@ import ContactSvg from "../../../public/images/contact/contact.svg";
 import styles from "./ContactFormSection.module.css";
 
 const ContactFormSection = () => {
+  const divStyles = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 1000 },
+  });
+
   return (
     <>
-      <div className={styles.contactFormSectionContainer}>
+      <animated.div
+        style={divStyles}
+        className={styles.contactFormSectionContainer}
+      >
         <ContactForm />
         <Image
           src={ContactSvg}
@@ -19,7 +29,7 @@ const ContactFormSection = () => {
           width={500}
           height={500}
         />
-      </div>
+      </animated.div>
     </>
   );
 };
