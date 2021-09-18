@@ -35,9 +35,8 @@ const sendMailHandler = (options: { name: string; email: string }) => {
   //send email with nodemailer
   transporter.sendMail({
     from: '"Fred Foo 👻" <foo@example.com>', // sender address
-    to: "Chrisragland97@gmail.com", // list of receivers
-    subject: "Hello ✔", // Subject line
-    text: "Hello world?", // plain text body
-    html: "<b>Hello world?</b>", // html body
+    to: `${options.email}`, // list of receivers
+    subject: `${options.name}, Thank you for reaching out!`, // Subject line
+    text: `${options.name} we recieved your email and will respond as soon as we can. We look forward to talking!`, // plain text body
   });
 };
