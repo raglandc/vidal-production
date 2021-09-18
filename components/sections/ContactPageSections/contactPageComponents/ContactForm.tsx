@@ -43,7 +43,7 @@ const ContactForm = () => {
   const apiFetcher = async (values: MyFormValues) => {
     const { name, email } = values;
     try {
-      const response = await fetch("/api/contact", {
+      await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
