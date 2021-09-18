@@ -1,4 +1,5 @@
 //library
+import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -15,6 +16,9 @@ interface MyFormValues {
 import styles from "./ContactForm.module.css";
 
 const ContactForm = () => {
+  //state for message status
+  const [messageStatusState, setMessageStatusState] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -43,13 +47,19 @@ const ContactForm = () => {
   const apiFetcher = async (values: MyFormValues) => {
     const { name, email } = values;
     try {
-      await fetch("/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ name, email }),
       });
+
+      if (response.status === 200) {
+        setMessageStatusState(true);
+      } else {
+        setMessageStatusState(false);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -58,8 +68,10 @@ const ContactForm = () => {
   return (
     <form className={styles.formContainer} onSubmit={formik.handleSubmit}>
       {/* the below div is for message status */}
-      {formik.errors.name && (
-        <div className={styles.messageStatusSucceed}>{formik.errors.name}</div>
+      {messageStatusState && (
+        <div className={styles.messageStatusSucceed}>
+          Your message has been sent!
+        </div>
       )}
       <h1>Contact</h1>
       <label className={styles.formLabel} htmlFor="name">
@@ -112,7 +124,10 @@ const ContactForm = () => {
         <button
           className={`${styles.formButton} ${styles.formButtonReset}`}
           type="reset"
-          onClick={() => formik.resetForm()}
+          onClick={() => {
+            formik.resetForm();
+            setMessageStatusState(false);
+          }}
         >
           Reset
         </button>
