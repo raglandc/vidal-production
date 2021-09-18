@@ -34,7 +34,6 @@ const ContactForm = () => {
     onSubmit: (values, actions) => {
       //after the form is submitied i will call an async function
       //to take the values and send them to google
-      console.log("made it here");
       apiFetcher(values);
       //reset form values
       actions.resetForm();
@@ -51,8 +50,6 @@ const ContactForm = () => {
         },
         body: JSON.stringify({ name, email }),
       });
-      const data = await response.json();
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
