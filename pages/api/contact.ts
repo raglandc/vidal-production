@@ -1,6 +1,9 @@
 //library
 import { NextApiRequest, NextApiResponse } from "next";
 
+//local
+import emailSVG from "../../public/emailSVG.svg";
+
 export default function contactHandler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -22,11 +25,11 @@ const sendMailHandler = (options: { name: string; email: string }) => {
 
   //creating transporter object
   const transporter = nodemailer.createTransport({
-    host: "smtp.mailtrap.io",
-    port: 2525,
+    host: process.env.EMAIL_TEST_HOST,
+    port: process.env.EMAIL_TEST_PORT,
     auth: {
-      user: "5c1291ac934945",
-      pass: "730ad46f07a683",
+      user: process.env.EMAIL_TEST_USER,
+      pass: process.env.EMAIL_TEST_PASS,
     },
 
     //activate less secure app if using google mail
@@ -34,9 +37,21 @@ const sendMailHandler = (options: { name: string; email: string }) => {
 
   //send email with nodemailer
   transporter.sendMail({
-    from: '"Vial Team" <Chrisragland97@gmail.com>', // sender address
+    from: '"Vidal Team" <vidaldevelopment@gmail.com>', // sender address
     to: `${options.email}`, // list of receivers
-    subject: `${options.name}, Thank you for reaching out!`, // Subject line
-    text: `${options.name} we recieved your email and will respond as soon as we can. We look forward to talking!`, // plain text body
+    subject: `A message from the Vidal team`, // Subject line
+    html: `<div style="width: 90%; height: 500px; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; align-items:center; border: 1px solid #grey; padding: 1rem;"> 
+    
+
+      <h2 style="color: #111">Thanks for reaching out ${options.name}!</h2>
+      <p style="color: grey;"> We recieved your email, and will respond as soon as possible.</p>
+
+
+      <p><strong>Automated Reply: Do Not Reply To This Email</strong></p>  
+
+    
+    
+    </div>
+    `,
   });
 };
