@@ -2,7 +2,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
 //local
-import emailSVG from "../../public/emailSVG.svg";
 
 export default function contactHandler(
   req: NextApiRequest,
