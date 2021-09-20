@@ -1,5 +1,5 @@
 //library
-import { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 //local
 
@@ -10,11 +10,19 @@ export default function contactHandler(
   //for data posting to the api
   if (req.method === "POST") {
     const { name, email } = req.body;
-    sendMailHandler({ name, email });
-    res.status(200).json({
-      status: 200,
-      message: `Email has been sent to ${email}`,
-    });
+    try {
+      sendMailHandler({ name, email });
+      res.status(200).json({
+        status: 200,
+        message: `Email has been sent to ${email}`,
+      });
+    } catch (err) {
+      res.status(400).json({
+        status: 400,
+        message: `An error occured while trying to send out your email.`,
+      });
+      console.log(err);
+    }
   }
 }
 
