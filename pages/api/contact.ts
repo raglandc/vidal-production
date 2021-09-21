@@ -9,9 +9,9 @@ export default function contactHandler(
 ) {
   //for data posting to the api
   if (req.method === "POST") {
-    const { name, email } = req.body;
+    const { name, email, message } = req.body;
     try {
-      sendMailHandler({ name, email });
+      sendMailHandler({ name, email, message });
       res.status(200).json({
         status: 200,
         message: `Email has been sent to ${email}`,
@@ -26,7 +26,11 @@ export default function contactHandler(
   }
 }
 
-const sendMailHandler = (options: { name: string; email: string }) => {
+const sendMailHandler = (options: {
+  name: string;
+  email: string;
+  message?: string;
+}) => {
   //using the nodemailer library to send emails
   const nodemailer = require("nodemailer");
 
@@ -42,23 +46,19 @@ const sendMailHandler = (options: { name: string; email: string }) => {
     //activate less secure app if using google mail
   });
 
-  //send email with nodemailer
+  //send email to customer with nodemailer
   transporter.sendMail({
     from: '"Vidal Team" <vidaldevelopment@gmail.com>', // sender address
     to: `${options.email}`, // list of receivers
     subject: `A message from the Vidal team`, // Subject line
-    html: `<div style="width: 90%; height: 500px; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; align-items:center; border: 1px solid #6b7280; padding: 1rem;"> 
-    
+    text: `Thanks for reaching out ${options.name}, we got your message and will respond as soon as we can.`,
+  });
 
-      <h2 style="color: #111">Thanks for reaching out ${options.name}!</h2>
-      <p style="color: #6b7280;"> We recieved your email, and will respond as soon as possible.</p>
-
-
-      <p><strong>Automated Reply: Do Not Reply To This Email</strong></p>  
-
-    
-    
-    </div>
-    `,
+  //send email with client info to self
+  transporter.sendMail({
+    from: `"${options.name}" <${options.email}>`,
+    to: "chrisragland97@gmail.com",
+    subject: `A message from your contact form`,
+    text: `${options.message}`,
   });
 };
