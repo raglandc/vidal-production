@@ -47,11 +47,11 @@ const sendMailHandler = (options: { name: string; email: string }) => {
     from: '"Vidal Team" <vidaldevelopment@gmail.com>', // sender address
     to: `${options.email}`, // list of receivers
     subject: `A message from the Vidal team`, // Subject line
-    html: `<div style="width: 90%; height: 500px; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; align-items:center; border: 1px solid #grey; padding: 1rem;"> 
+    html: `<div style="width: 90%; height: 500px; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; align-items:center; border: 1px solid #6b7280; padding: 1rem;"> 
     
 
       <h2 style="color: #111">Thanks for reaching out ${options.name}!</h2>
-      <p style="color: grey;"> We recieved your email, and will respond as soon as possible.</p>
+      <p style="color: #6b7280;"> We recieved your email, and will respond as soon as possible.</p>
 
 
       <p><strong>Automated Reply: Do Not Reply To This Email</strong></p>  
