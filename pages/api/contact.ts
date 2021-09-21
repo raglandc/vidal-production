@@ -1,7 +1,9 @@
 //library
 import type { NextApiRequest, NextApiResponse } from "next";
 
-//local
+////////////////////////////////////////////////////////////////
+//EVERYTHING WORKS, JUST TURN ON LESS SECURE APPS TO USE GMAIL//
+////////////////////////////////////////////////////////////////
 
 export default function contactHandler(
   req: NextApiRequest,
@@ -42,8 +44,6 @@ const sendMailHandler = (options: {
       user: process.env.EMAIL_TEST_USER,
       pass: process.env.EMAIL_TEST_PASS,
     },
-
-    //activate less secure app if using google mail
   });
 
   //send email to customer with nodemailer
