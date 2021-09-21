@@ -21,8 +21,8 @@ const TeamCard = (props: TeamCardType) => {
             className={styles.image}
             src={props.image}
             alt="team member picture"
-            width="162px"
-            height="162px"
+            width={300}
+            height={200}
           />
           <h4 className={styles.name}>{props.name}</h4>
         </div>

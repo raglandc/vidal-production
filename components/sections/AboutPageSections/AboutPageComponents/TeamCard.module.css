@@ -15,7 +15,7 @@
 }
 .image {
   margin: 0 auto;
-  border-radius: 50%;
+  border-radius: 45% 10%;
 }
 
 .name {
@@ -23,7 +23,7 @@
   background-color: #111;
   width: max-content;
   margin: 0 auto;
-  padding: 0.618rem 1rem;
+  padding: 1rem;
   color: #fff;
   border-radius: 5px;
   transform: translateY(-21px);

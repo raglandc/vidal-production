@@ -4,20 +4,20 @@ url: "three-reasons-to-love-next-js"
 date: "Sept. 8th 2021"
 author: "Chris Ragland"
 readTime: "7 min"
-image: /../public/images/posts/getting-started-writing-blogs/imageBlog.jpg
+image: https://images.unsplash.com/photo-1546980468-7eaeb47f4a27?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80
 excerpt: "Single page applications are the future by the looks of it. Lets explore why Next is a great option for building your project."
 isFeatured: true
 ---
 
 <div>
-<img width={1080} height={720} src={/../public/images/posts/getting-started-writing-blogs/imageBlog.jpg}>
+<img width={1080} height={720} src={https://images.unsplash.com/photo-1546980468-7eaeb47f4a27?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80}>
 </div>
 
 ## Reason One: Server Side Rendering
 
-I think alot of us can agree that we love React, thank you Facebook. However one problem with get with vanilla React is all of the code stays on the client side.
+I think alot of us can agree that we love React, thank you Facebook. However, one problem we get with vanilla React, is all of the code stays on the client side.
 
-Which is fine, but what if we want to run some code that we dont want the client to see?
+Which is fine... but what if we want to run some code that we dont want the client to see?
 
 Well we could use a third party for some backend code, but wait!
 
@@ -29,9 +29,9 @@ Usually with React if we want to create paths for each of our pages we use a pac
 
 Yet, with NextJs this is built in to how you structure your files.
 
-Thats right, the way you structure your files in your next Next project (see what I did there? 😉) will define how the url changes as you navigate the application.
+Thats right, the way you structure your files in your next Next project (see what I did there? 😉 ) will define how the url changes as you navigate the application.
 
-Thats pretty awesome if you ask me. You also have the ability for dynamic routing which is a topic for another day because its out of this basic scope of why I love NextJs.
+Thats pretty awesome if you ask me. You also have the ability for dynamic routing which is a topic for another day because it is a bit out of this scope of this article.
 
 ## Reason Three: SEO
 
@@ -45,6 +45,6 @@ As stated earlier, NextJs is server side and has the ability to pre-render some 
 
 There are plenty of options when it comes to building web applications. Infact, it seems like everyday there is a new javascript framework being created.
 
-I suggest you consider NextJs as a tool to add to your arsesonal. Things change all the time in the world of tech and there is no telling what could be right around the coner. However, I do belive Next is one that is here to stick around for many reasons. More than what I described today, this was just a little icing from the cake.
+I suggest you consider NextJs as a tool to add to your arsenol. Things change all the time in the world of tech and while there is no telling what could be right around the corner. However, I do belive Next is one that is here to stick around for many reasons. More than what I described today, this was just a little icing from the cake.
 
 Until Next time my friends, have fun!
