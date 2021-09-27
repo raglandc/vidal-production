@@ -10,6 +10,10 @@ const HomePage = () => {
     <>
       <Head>
         <title>Vidal - Dream | Design | Develope</title>
+        <meta
+          name="description"
+          content="Welcome to the future of web design. Simple, clean and elegant designs that are quick and responsive.  "
+        />
       </Head>
       <BannerSection />
       <PerkSection />

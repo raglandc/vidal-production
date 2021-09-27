@@ -10,6 +10,10 @@ const AboutPage = () => {
     <>
       <Head>
         <title>Vidal - Meet The Team</title>
+        <meta
+          name="description"
+          content="Meet and learn more about the team behind Vidal development"
+        />
       </Head>
       <AboutIntro />
       <ThreeDSection />

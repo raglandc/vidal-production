@@ -7,7 +7,7 @@ import { store } from "../app/store";
 //font awesome icons//
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
 import { config } from "@fortawesome/fontawesome-svg-core";
-//telling fonst awesome to skip adding css
+//telling font awesome to skip adding css
 //since its being imported above
 config.autoAddCss = false;
 

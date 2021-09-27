@@ -32,6 +32,7 @@ const BlogPost = ({
     <>
       <Head>
         <title>Vidal - {post.title}</title>
+        <meta name="description" content={post.excerpt} />
       </Head>
       <div className={styles.blogContainer}>
         <div>
