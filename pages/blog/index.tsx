@@ -25,6 +25,7 @@ const BlogPage = ({
     <>
       <Head>
         <title>Vidal - Blog Posts</title>
+        <meta name="description" content="" />
       </Head>
       <div className={styles.blogContainer}>
         <h1 className={styles.blogHeader}>Blog Posts</h1>
