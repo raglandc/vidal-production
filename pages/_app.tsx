@@ -16,7 +16,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <Layout>
         <Head>
-          <title>Vidal - Dream | Design | Develope</title>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
