@@ -1,5 +1,5 @@
 ---
-title: "Three reasons to love NextJS"
+title: "Three Reasons to Love NextJS"
 url: "three-reasons-to-love-next-js"
 date: "Sept. 8th 2021"
 author: "Chris Ragland"

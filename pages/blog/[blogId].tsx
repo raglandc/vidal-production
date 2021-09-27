@@ -4,6 +4,7 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Markdown from "markdown-to-jsx";
+import Head from "next/head";
 
 //local imports
 import { getPostData, getPostFiles } from "../../lib/posts-util";
@@ -28,34 +29,39 @@ const BlogPost = ({
   };
 }) => {
   return (
-    <div className={styles.blogContainer}>
-      <div>
-        <h2 className={styles.blogTitle}>{post.title}</h2>
-        <p className={styles.blogAuthor}>{post.author}</p>
-        <div className={styles.blogInfo}>
-          <p>{post.date}</p>
-          <p>|</p>
-          <p>{post.readTime} read</p>
+    <>
+      <Head>
+        <title>Vidal - {post.title}</title>
+      </Head>
+      <div className={styles.blogContainer}>
+        <div>
+          <h2 className={styles.blogTitle}>{post.title}</h2>
+          <p className={styles.blogAuthor}>{post.author}</p>
+          <div className={styles.blogInfo}>
+            <p>{post.date}</p>
+            <p>|</p>
+            <p>{post.readTime} read</p>
+          </div>
+        </div>
+        <Markdown
+          options={{
+            overrides: {
+              img: {
+                component: Image,
+              },
+              div: {
+                component: ImageDiv,
+              },
+            },
+          }}
+        >
+          {post.content}
+        </Markdown>
+        <div className={styles.backToOtherBlogs}>
+          <Link href="/blog">&larr; back to other articles</Link>
         </div>
       </div>
-      <Markdown
-        options={{
-          overrides: {
-            img: {
-              component: Image,
-            },
-            div: {
-              component: ImageDiv,
-            },
-          },
-        }}
-      >
-        {post.content}
-      </Markdown>
-      <div className={styles.backToOtherBlogs}>
-        <Link href="/blog">&larr; back to other articles</Link>
-      </div>
-    </div>
+    </>
   );
 };
 
