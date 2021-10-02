@@ -1,17 +1,22 @@
 .container {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  max-width: 100%;
+  min-height: 100vh;
+
+  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)),
+    url("../../../public/images/home/workers-with-masks.jpg") no-repeat fixed
+      center;
+  background-size: cover;
 
   margin: 5% auto;
-  min-height: max-content;
 }
 
 @media only screen and (min-width: 1300px) {
   .container {
     flex-direction: row;
-    width: 60%;
   }
 }

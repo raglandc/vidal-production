@@ -7,21 +7,19 @@
   min-height: 40rem;
   margin: 2rem 1rem;
   padding: 1rem 2.618rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   text-align: center;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
   box-shadow: 0 0 1.62px #6b7280;
 
   /* animation settings */
   opacity: 1;
   transition: opacity 1618ms ease-in;
-}
-
-.svgClass {
-  color: #111;
 }
 
 .title {
@@ -38,6 +36,6 @@
 
 @media only screen and (min-width: 1300px) {
   .card {
-    width: 30%;
+    width: 20%;
   }
 }
