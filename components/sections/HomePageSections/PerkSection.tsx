@@ -24,7 +24,7 @@ const cards: {
     key: "card-2",
     svgLink: seo,
     description:
-      "SEO is what search engines (Google, Bing, Etc.) use to see what your site is all about. Vidals websites are built to be extremly SEO friendly.",
+      "SEO is what search engines (Google, Bing, Etc.) use to see what your site is all about. Vidal's websites are built to be extremely SEO friendly.",
     title: "SEO",
   },
   {
