@@ -1,4 +1,4 @@
-//state managment imports
+//state management imports
 import { useAppDispatch, useAppSelector } from "../../../../app/hooks";
 import {
   setMenuStatus,

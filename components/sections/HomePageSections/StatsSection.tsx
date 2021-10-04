@@ -31,7 +31,7 @@ const stats = [
     description: "Only 50% of small businesses have a website.",
     source: "SmartCompany.com",
     svgSource: StatThreeSvg,
-    svgTitle: "creating a website for small buissness",
+    svgTitle: "creating a website for small business",
   },
 ];
 

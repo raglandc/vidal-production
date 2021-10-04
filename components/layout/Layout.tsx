@@ -4,7 +4,6 @@ import Footer from "./footer/Footer";
 
 ///styles///
 import styles from "./Layout.module.css";
-import Modal from "../UI/Modal";
 
 const Layout: FC = (props) => {
   return (
