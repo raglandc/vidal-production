@@ -1,5 +1,5 @@
 .blogCard {
-  color: #fff;
+  color: #6b7280;
   overflow: hidden;
   margin: 2rem auto;
   width: 100%;
@@ -9,12 +9,6 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0rem 0.1rem 0.618rem #6b7280;
-
-  background: linear-gradient(
-    135deg,
-    rgba(17, 17, 17, 1),
-    rgba(17, 17, 17, 0.9)
-  );
 }
 .blogCard:hover {
   cursor: pointer;
@@ -31,6 +25,7 @@
 }
 
 .blogCardTitle {
+  color: #111;
   margin: 0 0 0.3rem 0;
   font-size: 1.618rem;
 }
