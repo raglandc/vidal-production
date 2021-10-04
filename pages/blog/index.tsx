@@ -31,7 +31,10 @@ const BlogPage = ({
         />
       </Head>
       <div className={styles.blogContainer}>
-        <h1 className={styles.blogHeader}>Blog Posts</h1>
+        <div className={styles.blogHeaderContainer}>
+          <h1 className={styles.blogHeader}>Blog Posts</h1>
+          <p className={styles.blogHeaderText}>Tech | Math | Lifestyle</p>
+        </div>
         <ul className={styles.blogListContainer}>
           {/* isLoading ? isLoadingIcon : display list of blogs from database */}
           {allPosts.map((post: any) => {

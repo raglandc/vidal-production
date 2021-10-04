@@ -1,28 +1,51 @@
-.blogHeader {
-  font-size: 4.18rem;
-  color: #111;
-}
-
 .blogContainer {
+  width: 100%;
   min-height: 100vh;
-  width: 90%;
-  margin: 6.18rem auto 0 auto;
+  margin: 0 auto;
   margin-top: 6.18rem;
 }
 
-.blogListContainer {
-  margin: 6rem auto;
-  padding: 0;
+.blogHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.14rem;
+
+  background: linear-gradient(rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.5)),
+    url("../../public//images/blog/abstract.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 34vh;
 }
 
-@media only screen and (min-width: 700px) {
-  .blogContainer {
-    width: 60%;
-  }
+.blogHeader {
+  color: #f9fafb;
+  letter-spacing: 5px;
+}
+
+.blogHeaderText {
+  letter-spacing: 3px;
+  margin: 0;
+  padding: 0;
+  color: #d1d5db;
+}
+
+.blogListContainer {
+  width: 90%;
+  margin: 6rem auto;
+  padding: 0;
 }
 
 @media only screen and (min-width: 1300px) {
   .blogContainer {
     display: flex;
+  }
+
+  .blogListContainer {
+    width: 50%;
+  }
+
+  .blogHeaderContainer {
+    width: 50%;
   }
 }
