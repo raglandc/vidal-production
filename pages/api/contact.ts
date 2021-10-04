@@ -21,7 +21,7 @@ export default function contactHandler(
     } catch (err) {
       res.status(400).json({
         status: 400,
-        message: `An error occured while trying to send out your email.`,
+        message: `An error occurred while trying to send out your email.`,
       });
       console.log(err);
     }
