@@ -1,23 +1,25 @@
 .blogCard {
-  background-color: #fff;
-  color: #6b7280;
+  background-color: rgba(17, 17, 17, 0.908);
+  color: #d1d5db;
   overflow: hidden;
   margin: 2rem auto;
   width: 100%;
-  min-height: 15rem;
+  min-height: 16.5rem;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0rem 0.1rem 0.618rem #6b7280;
+  box-shadow: 0 0 1rem 0 rgba(255, 255, 255, 0.356);
 }
 .blogCard:hover {
   cursor: pointer;
-  box-shadow: 0rem 0.1rem 0.886rem #6b7280;
+  background-color: rgba(17, 17, 17, 1);
+  box-shadow: 0 0 1rem 0.5rem rgba(255, 255, 255, 0.2);
 }
 .blogCard:active {
   cursor: pointer;
-  box-shadow: 0rem 0.1rem 0.618rem #6b7280;
+  background-color: rgba(17, 17, 17, 1);
+  box-shadow: 0 0 1rem 0.15rem rgba(255, 255, 255, 0.2);
 }
 
 .contentsOfCard {
@@ -26,13 +28,13 @@
 }
 
 .blogCardTitle {
-  color: #111;
+  color: #e5e7eb;
   margin: 0 0 0.3rem 0;
-  font-size: 1.618rem;
+  font-size: 1.6rem;
 }
 
 .description {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 0.5rem auto;
 }
 
@@ -43,7 +45,7 @@
 
 .span {
   margin: 2rem 1rem 0 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 @media only screen and (min-width: 700px) {

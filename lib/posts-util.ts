@@ -35,7 +35,7 @@ export function getAllPosts() {
   });
 
   const sortedPosts = allPosts.sort((postA: any, postB: any) => {
-    return postA.date > postB.date ? -1 : 1;
+    return postA.date < postB.date ? -1 : 1;
   });
 
   return sortedPosts;
