@@ -1,4 +1,5 @@
 ---
+key: 1
 title: "Three Reasons to Love NextJS"
 url: "three-reasons-to-love-next-js"
 date: "Sept. 8th 2021"

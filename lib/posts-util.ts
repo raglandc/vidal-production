@@ -41,10 +41,24 @@ export function getAllPosts() {
   return sortedPosts;
 }
 
-export function getFeaturedPosts() {
+//created filter functions
+
+export function getNewPosts() {
   const allPosts = getAllPosts();
 
-  const featuredPosts = allPosts.filter((post: any) => post.isFeatured);
+  const newPosts = allPosts.sort((postA: any, postB: any) => {
+    return postA.date < postB.date ? -1 : 1;
+  });
 
-  return featuredPosts;
+  return newPosts;
+}
+
+export function getOldPosts() {
+  const allPosts = getAllPosts();
+
+  const oldPosts = allPosts.sort((postA: any, postB: any) => {
+    return postA > postB.date ? -1 : 1;
+  });
+
+  return oldPosts;
 }

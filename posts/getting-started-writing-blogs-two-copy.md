@@ -1,4 +1,5 @@
 ---
+key: 3
 title: "Working with TypeScript Can Be Painful"
 url: "working-with-typescript-can-be-painful"
 date: "Sept. 19th 2021"

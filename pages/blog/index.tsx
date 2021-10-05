@@ -1,6 +1,7 @@
 //library import
 import Head from "next/head";
 import { GetStaticProps } from "next";
+import { useState, useEffect } from "react";
 
 //local imports
 import BlogListItem from "../../components/UI/BlogListItem";
@@ -13,7 +14,7 @@ const BlogPage = ({
   allPosts,
 }: {
   allPosts: {
-    key: string;
+    key: number;
     title: string;
     author: string;
     date: string;
@@ -21,6 +22,31 @@ const BlogPage = ({
     excerpt: string;
   }[];
 }) => {
+  const [postsArray, setPostsArray] = useState([...allPosts]);
+  const [filterState, setFilterState] = useState("newest");
+
+  const filterBlogsHandler = () => {
+    //set postsArray return the array and fill postsArray
+
+    console.log(filterState);
+
+    if (filterState === "newest") {
+      setPostsArray([
+        ...postsArray.sort((postA: any, postB: any) => {
+          return postA.date > postB.date ? -1 : 1;
+        }),
+      ]);
+    }
+
+    if (filterState === "oldest") {
+      setPostsArray([
+        ...postsArray.sort((postA: any, postB: any) => {
+          return postA.date < postB.date ? -1 : 1;
+        }),
+      ]);
+    }
+  };
+
   return (
     <>
       <Head>
@@ -36,11 +62,25 @@ const BlogPage = ({
           <p className={styles.blogHeaderText}>Tech | Math | Lifestyle</p>
         </div>
         <ul className={styles.blogListContainer}>
+          <div className={styles.blogFilter}>
+            <label htmlFor="filter">Filter</label>
+            <select
+              onChange={(e) => {
+                setFilterState(e.target.value);
+                filterBlogsHandler();
+              }}
+              name="filter"
+              id="filter"
+            >
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+            </select>
+          </div>
           {/* isLoading ? isLoadingIcon : display list of blogs from database */}
-          {allPosts.map((post: any) => {
+          {postsArray.map((post: any) => {
             return (
               <BlogListItem
-                key={post.title}
+                key={post.key}
                 slug={post.slug}
                 title={post.title}
                 author={post.author}
