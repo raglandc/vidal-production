@@ -44,6 +44,7 @@
 
 .blogFilterSelect {
   background: transparent;
+  color: #111;
   border: none;
   height: 3rem;
   font-size: 2rem;
@@ -56,7 +57,7 @@
   }
 
   .blogListContainer {
-    width: 45%;
+    width: 40%;
     transform: translate(-21%);
 
     /* glassy container */

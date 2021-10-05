@@ -1,7 +1,7 @@
 //library import
 import Head from "next/head";
 import { GetStaticProps } from "next";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 //local imports
 import BlogListItem from "../../components/UI/BlogListItem";

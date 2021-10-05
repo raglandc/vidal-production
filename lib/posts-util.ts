@@ -40,25 +40,3 @@ export function getAllPosts() {
 
   return sortedPosts;
 }
-
-//created filter functions
-
-export function getNewPosts() {
-  const allPosts = getAllPosts();
-
-  const newPosts = allPosts.sort((postA: any, postB: any) => {
-    return postA.date < postB.date ? -1 : 1;
-  });
-
-  return newPosts;
-}
-
-export function getOldPosts() {
-  const allPosts = getAllPosts();
-
-  const oldPosts = allPosts.sort((postA: any, postB: any) => {
-    return postA > postB.date ? -1 : 1;
-  });
-
-  return oldPosts;
-}
