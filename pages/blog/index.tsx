@@ -22,15 +22,19 @@ const BlogPage = ({
     excerpt: string;
   }[];
 }) => {
+  /////////////////////////////////////////////////////////
+  ////////////filter functionality//////////////////////////
+  /////////////////////////////////////////////////////////
   const [postsArray, setPostsArray] = useState([...allPosts]);
-  const [filterState, setFilterState] = useState("newest");
+  const [filterState, setFilterState] = useState("new");
 
   const filterBlogsHandler = () => {
-    //set postsArray return the array and fill postsArray
-
+    //as we can see on this log, it is the opposite of what is displayed
     console.log(filterState);
 
-    if (filterState === "newest") {
+    //check to see if the filter is set to new
+    if (filterState === "new") {
+      //spread the sorted array into the array that gets mapped over
       setPostsArray([
         ...postsArray.sort((postA: any, postB: any) => {
           return postA.date > postB.date ? -1 : 1;
@@ -38,7 +42,9 @@ const BlogPage = ({
       ]);
     }
 
-    if (filterState === "oldest") {
+    //check to see if filter is set to old
+    if (filterState === "old") {
+      //spread the sorted array into the array that gets displayed
       setPostsArray([
         ...postsArray.sort((postA: any, postB: any) => {
           return postA.date < postB.date ? -1 : 1;
@@ -46,6 +52,10 @@ const BlogPage = ({
       ]);
     }
   };
+
+  /////////////////////////////////////////////////////////////////////////
+  ////////////////////////////// component ////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////
 
   return (
     <>
@@ -63,8 +73,9 @@ const BlogPage = ({
         </div>
         <ul className={styles.blogListContainer}>
           <div className={styles.blogFilter}>
-            <label htmlFor="filter">Filter</label>
+            <label className={styles.blogFilterLabel} htmlFor="filter"></label>
             <select
+              className={styles.blogFilterSelect}
               onChange={(e) => {
                 setFilterState(e.target.value);
                 filterBlogsHandler();
@@ -72,8 +83,8 @@ const BlogPage = ({
               name="filter"
               id="filter"
             >
-              <option value="newest">Newest</option>
-              <option value="oldest">Oldest</option>
+              <option value="new">New</option>
+              <option value="old">Old</option>
             </select>
           </div>
           {/* isLoading ? isLoadingIcon : display list of blogs from database */}
