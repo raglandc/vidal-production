@@ -15,7 +15,7 @@
   align-items: center;
   font-size: 2.14rem;
 
-  min-height: 34vh;
+  min-height: 50vh;
 }
 
 .blogHeader {
@@ -57,17 +57,16 @@
   }
 
   .blogListContainer {
-    width: 40%;
-    transform: translate(-21%);
+    width: 55%;
 
     /* glassy container */
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); */
   }
 
   .blogHeaderContainer {
-    width: 55%;
+    width: 45%;
   }
 }

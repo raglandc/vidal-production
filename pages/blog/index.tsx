@@ -30,7 +30,7 @@ const BlogPage = ({
 
   const filterBlogsHandler = () => {
     //as we can see on this log, it is the opposite of what is displayed
-    console.log(filterState);
+    // console.log(filterState);
 
     //check to see if the filter is set to new
     if (filterState === "new") {
