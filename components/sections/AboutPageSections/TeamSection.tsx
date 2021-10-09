@@ -6,7 +6,6 @@ import EngineerPicture from "../../../public/images/about/engineerVidal.jpg";
 import DesignerPicture from "../../../public/images/about/designerVidal.jpg";
 //styles
 import styles from "./TeamSection.module.css";
-import AboutVideoSection from "./AboutVideoSection";
 
 //create all team members in the array below
 const teamMembers = [
@@ -32,7 +31,7 @@ const teamMembers = [
     title: "Designer",
     image: DesignerPicture,
     description:
-      "Chris enjoys designing simple, yet beautiful layouts. Often including fibinocci ratios to appeal to the subconcious perspective",
+      "Chris enjoys designing simple, yet beautiful layouts. Often including fibonacci ratios to appeal to the subconscious perspective",
   },
 ];
 
@@ -40,7 +39,6 @@ const TeamSection = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.header}>Meet The Team</h2>
-      <AboutVideoSection />
       <div className={styles.teamCardSectionContainer}>
         {teamMembers.map((teamMember) => {
           return (
