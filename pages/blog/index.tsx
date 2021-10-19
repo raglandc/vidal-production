@@ -1,4 +1,4 @@
-//library import
+//library imports
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { useState } from "react";

@@ -1,4 +1,4 @@
-//local imports
+//local import
 import TeamCard from "./AboutPageComponents/TeamCard";
 //images imported before component loads
 import PresidentPicture from "../../../public/images/about/presidentVidal.jpg";
