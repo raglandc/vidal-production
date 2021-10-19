@@ -8,9 +8,11 @@
   min-height: 100vh;
 
   background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)),
-    url("../../../public/images/home/workers-with-masks.jpg") no-repeat fixed;
+    url("../../../public/images/home/workers-with-masks.jpg");
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  background-attachment: fixed;
 
   margin: 5% auto;
 }
