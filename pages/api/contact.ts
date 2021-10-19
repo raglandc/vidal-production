@@ -48,7 +48,7 @@ const sendMailHandler = (options: {
 
   //send email to customer with nodemailer
   transporter.sendMail({
-    from: '"Vidal Team" <vidaldevelopment@gmail.com>', // sender address
+    from: '"Vidal Team" <vidalteamcontact@gmail.com>', // sender address
     to: `${options.email}`, // list of receivers
     subject: `A message from the Vidal team`, // Subject line
     text: `Thanks for reaching out ${options.name}, we got your message and will respond as soon as we can.`,
@@ -57,7 +57,7 @@ const sendMailHandler = (options: {
   //send email with client info to self
   transporter.sendMail({
     from: `"${options.name}" <${options.email}>`,
-    to: "chrisragland97@gmail.com",
+    to: "vidalteamcontact@gmail.com",
     subject: `A message from your contact form`,
     text: `${options.message}`,
   });
