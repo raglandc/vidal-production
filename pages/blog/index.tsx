@@ -8,6 +8,7 @@ import BlogListItem from "../../components/UI/BlogListItem";
 import { getAllPosts } from "../../lib/posts-util";
 
 //style import
+//case sensitive for production
 import styles from "./BlogIndex.module.css";
 
 const BlogPage = ({

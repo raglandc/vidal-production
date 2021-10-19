@@ -59,6 +59,7 @@
   .blogListContainer {
     width: 55%;
 
+    /* removed for production but styles for other projects */
     /* glassy container */
     /* box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
