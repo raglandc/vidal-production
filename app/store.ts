@@ -4,7 +4,7 @@ import setMenuStatusReducer from "./features/menuStatusSlice";
 export const store = configureStore({
   reducer: {
     //This is where we add reducers
-    //currently dont hace any
+    //currently dont have any
     menuStatus: setMenuStatusReducer,
   },
 });

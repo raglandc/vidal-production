@@ -1,7 +1,6 @@
 //library
 import Image from "next/image";
 //styles
-
 import styles from "./TeamCard.module.css";
 
 type TeamCardType = {

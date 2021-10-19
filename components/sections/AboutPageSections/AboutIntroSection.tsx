@@ -23,7 +23,7 @@ const AboutIntro = () => {
         <div className={styles.container}>
           <p className={styles.p}>
             &ldquo;Vidal&apos;s promise is to deliver high quality websites that
-            scream modern and professional. Vidal adhears to the KISS method
+            scream modern and professional. Vidal adheres to the KISS method
             while designing: Keep It Simple Stupid.&rdquo;
           </p>
           <div className={styles.sig}>

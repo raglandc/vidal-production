@@ -22,8 +22,6 @@ const BlogListItem = (props: BlogListItemProps) => {
     config: { duration: 314 },
   });
 
-  //need to create a link that will take current url and add id of specific blog
-
   return (
     <animated.div style={divStyle}>
       <Link

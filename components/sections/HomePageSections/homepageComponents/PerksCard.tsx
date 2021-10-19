@@ -1,4 +1,4 @@
-//libaray imports
+//library imports
 import { useRef } from "react";
 import Image from "next/image";
 import useIntersectionObserver from "../../../../hooks/useIntersectionObserver";

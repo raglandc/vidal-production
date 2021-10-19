@@ -3,8 +3,6 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-//local imports
-
 //type
 interface MyFormValues {
   name: string;
@@ -30,13 +28,13 @@ const ContactForm = () => {
         .min(1, "Please enter your full name")
         .max(20, "Must be 20 characters or less")
         .required("Required"),
-      email: Yup.string().email("Invalid email adress").required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
       message: Yup.string()
         .min(1, "Please describe how Vidal can help you")
         .required("Required"),
     }),
     onSubmit: (values, actions) => {
-      //after the form is submitied i will call an async function
+      //after the form is submitted i will call an async function
       //to take the values and send them to google
       apiFetcher(values);
       //reset form values

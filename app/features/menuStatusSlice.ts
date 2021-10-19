@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 import type { RootState } from "../store";
 
-//decalre types for state
+//declare types for state
 export type MenuState = {
   status: boolean;
 };

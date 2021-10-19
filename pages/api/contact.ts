@@ -38,11 +38,11 @@ const sendMailHandler = (options: {
 
   //creating transporter object
   const transporter = nodemailer.createTransport({
-    host: process.env.EMAIL_TEST_HOST,
-    port: process.env.EMAIL_TEST_PORT,
+    host: process.env.EMAIL_HOST,
+    port: process.env.EMAIL_PORT,
     auth: {
-      user: process.env.EMAIL_TEST_USER,
-      pass: process.env.EMAIL_TEST_PASS,
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 

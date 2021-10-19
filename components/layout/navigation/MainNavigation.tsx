@@ -1,7 +1,7 @@
 //library
-
-//components
 import Link from "next/link";
+
+//local
 import Logo from "../../UI/Logo";
 import MobileNavIcon from "./sideDrawer/MobileNavIcon";
 import ListNavigation from "./sideDrawer/ListNavigation";

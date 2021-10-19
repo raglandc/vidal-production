@@ -80,7 +80,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-//define type so slug exsists on params
+//define type so slug exists on params
 interface IParams extends ParsedUrlQuery {
   slug: string;
 }
@@ -88,7 +88,6 @@ interface IParams extends ParsedUrlQuery {
 //dynamically fetch data and return data as props from server
 //next js built in static data fetching
 export const getStaticProps: GetStaticProps = async (context) => {
-  //fetch data from an api
   const { params } = context;
 
   const { blogId } = params as IParams;
