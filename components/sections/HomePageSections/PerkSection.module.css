@@ -8,8 +8,8 @@
   min-height: 100vh;
 
   background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)),
-    url("../../../public/images/home/workers-with-masks.jpg") no-repeat fixed
-      center;
+    url("../../../public/images/home/workers-with-masks.jpg") no-repeat fixed;
+  background-position: center;
   background-size: cover;
 
   margin: 5% auto;

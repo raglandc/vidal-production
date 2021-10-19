@@ -8,6 +8,7 @@
 .blogHeaderContainer {
   background: linear-gradient(rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.5)),
     url("../../public//images/blog/abstract.jpg") no-repeat center;
+  background-position: center;
   background-size: cover;
   display: flex;
   flex-direction: column;

@@ -1,6 +1,4 @@
 //library imports
-import { useRef } from "react";
-import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 import Image from "next/image";
 
 //local
@@ -11,10 +9,6 @@ import Button from "../../UI/Button";
 import styles from "./BannerSection.module.css";
 
 const BannerSection = () => {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const entry = useIntersectionObserver(ref, {});
-  const isVisible = !!entry?.isIntersecting;
-
   return (
     <div className={styles.container}>
       <div className={styles.divider}>
