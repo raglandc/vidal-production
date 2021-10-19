@@ -29,11 +29,6 @@
   margin: 0 0 3.618rem 0;
 }
 
-.svg {
-  opacity: 1;
-  transition: opacity 1000ms ease-out, transform 1000ms ease-out;
-}
-
 .subHeading__text {
   margin: 0 0 3.14rem 0;
 }
@@ -62,7 +57,7 @@
     width: 50%;
   }
 
-  .svgEnd {
+  .svg {
     text-align: center;
     width: 50%;
   }
