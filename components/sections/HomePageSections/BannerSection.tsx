@@ -19,17 +19,9 @@ const BannerSection = () => {
     <div className={styles.container}>
       <div className={styles.divider}>
         <div className={styles.titleWrapper}>
-          <h1
-            ref={ref}
-            className={isVisible ? styles.title : styles.titleVidal}
-          >
-            Vidal
-          </h1>
+          <h1 className={styles.title}>Vidal</h1>
         </div>
-        <div
-          ref={ref}
-          className={isVisible ? styles.subHeading : styles.subHeadingStart}
-        >
+        <div className={styles.subHeading}>
           <p className={styles.subHeading__text}>
             A powerful online presence is important.
           </p>
@@ -41,7 +33,7 @@ const BannerSection = () => {
           <Button link="/contact" title="Contact" style="solid" />
         </div>
       </div>
-      <div ref={ref} className={isVisible ? styles.svgEnd : styles.svgStart}>
+      <div className={styles.svg}>
         <Image
           src={BannerSvg}
           alt="personal website cartoon"

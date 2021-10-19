@@ -17,20 +17,9 @@
   margin: 0 0 3.14rem;
 }
 
-.titleVidal {
-  opacity: 0;
-  transform: translate(-150px);
-}
-
 .title {
   color: #111;
   font-size: 8rem;
-  opacity: 1;
-  transition: opacity 1618ms ease-in, transform 1000ms ease-out;
-}
-
-.subHeadingStart {
-  opacity: 0;
 }
 
 .subHeading {
@@ -38,15 +27,9 @@
   text-align: center;
   font-size: 2rem;
   margin: 0 0 3.618rem 0;
-  opacity: 1;
-  transition: opacity 1618ms ease-out;
 }
 
-.svgStart {
-  transform: translate(500px);
-  opacity: 0;
-}
-.svgEnd {
+.svg {
   opacity: 1;
   transition: opacity 1000ms ease-out, transform 1000ms ease-out;
 }
