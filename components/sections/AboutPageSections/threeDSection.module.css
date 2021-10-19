@@ -5,7 +5,7 @@
   padding: 8rem 0;
 
   background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)),
-    url("/public/images/about/lightbulb.jpg") no-repeat fixed center;
+    url("./../../../public/images/about/lightbulb.jpg") no-repeat fixed center;
   background-size: cover;
 
   margin: 8rem auto;
