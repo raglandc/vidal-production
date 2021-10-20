@@ -8,8 +8,8 @@
     url("./../../../public/images/about/lightbulb.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  /* background-size: auto; */
 
   margin: 8rem auto;
   font-size: 4.9rem;
