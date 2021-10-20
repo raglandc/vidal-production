@@ -9,7 +9,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  /* background-size: auto; */
 
   margin: 8rem auto;
   font-size: 4.9rem;

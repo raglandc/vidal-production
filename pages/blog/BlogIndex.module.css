@@ -7,7 +7,7 @@
 
 .blogHeaderContainer {
   background: linear-gradient(rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.5)),
-    url("../../public//images/blog/abstract.jpg");
+    url("../../public/images/blog/abstract.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
