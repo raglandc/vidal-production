@@ -4,13 +4,8 @@
   height: 100vh;
   padding: 8rem 0;
 
-  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)),
-    url("./../../../public/images/about/lightbulb.jpg");
+  background: linear-gradient(rgba(17, 17, 17, 0.904), rgb(17, 17, 17));
   background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
   margin: 8rem auto;
   font-size: 4.9rem;
 
@@ -39,5 +34,16 @@
   .container {
     font-size: 8.18rem;
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .container {
+    background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)),
+      url("./../../../public/images/about/lightbulb.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }

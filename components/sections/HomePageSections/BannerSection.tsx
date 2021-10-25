@@ -1,5 +1,6 @@
 //library imports
 import Image from "next/image";
+import { useSpring, animated } from "@react-spring/web";
 
 //local
 import BannerSvg from "../../../public/images/home/bannerSVG.svg";
@@ -9,8 +10,15 @@ import Button from "../../UI/Button";
 import styles from "./BannerSection.module.css";
 
 const BannerSection = () => {
+  //animated entrance
+  const entranceStyles = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    delay: 200,
+  });
+
   return (
-    <div className={styles.container}>
+    <animated.div style={entranceStyles} className={styles.container}>
       <div className={styles.divider}>
         <div className={styles.titleWrapper}>
           <h1 className={styles.title}>Vidal</h1>
@@ -35,7 +43,7 @@ const BannerSection = () => {
           height={500}
         />
       </div>
-    </div>
+    </animated.div>
   );
 };
 
