@@ -50,7 +50,7 @@ const sendMailHandler = (options: {
   transporter.sendMail({
     from: '"Vidal Team" <vidalteamcontact@gmail.com>', // sender address
     to: `${options.email}`, // list of receivers
-    subject: `A message from the Vidal team`, // Subject line
+    subject: `A Message From the Vidal Team`, // Subject line
     text: `Thanks for reaching out ${options.name}, we got your message and will respond as soon as we can.`,
   });
 
