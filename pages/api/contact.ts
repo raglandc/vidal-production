@@ -1,5 +1,8 @@
-//library
 import type { NextApiRequest, NextApiResponse } from "next";
+
+const sgMail = require("@sendgrid/mail");
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 ////////////////////////////////////////////////////////////////
 //EVERYTHING WORKS, JUST TURN ON LESS SECURE APPS TO USE GMAIL//
@@ -9,56 +12,40 @@ export default function contactHandler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  //for data posting to the api
-  if (req.method === "POST") {
-    const { name, email, message } = req.body;
-    try {
-      sendMailHandler({ name, email, message });
+  const { name, email, message } = req.body;
+
+  const mssg = {
+    to: `${email}`,
+    from: `vidalteamcontact@gmail.com`,
+    subject: `Thank you for reaching out`,
+    text: `We got your message! We will respond shortly to the email you gave us.`,
+  };
+
+  const mssgToVidal = {
+    to: `vidalteamcontact@gmail.com`,
+    from: `vidalteamcontact@gmail.com`,
+    subject: `Email from ${name}`,
+    text: `${message}, from: ${email}`,
+  };
+
+  sgMail
+    .send(mssg)
+    .then(() => {
       res.status(200).json({
-        status: 200,
-        message: `Email has been sent to ${email}`,
+        message: "Email sent to user.",
       });
-    } catch (err) {
-      res.status(400).json({
-        status: 400,
-        message: `An error occurred while trying to send out your email.`,
-      });
-      console.log(err);
-    }
-  }
+    })
+    .catch((error: Error) => {
+      res.status(500).json({ message: "Failed to send email to user" });
+      console.error(error);
+    });
+
+  sgMail
+    .send(mssgToVidal)
+    .then(() => {
+      console.log("Email Sent");
+    })
+    .catch((error: Error) => {
+      console.error(error);
+    });
 }
-
-const sendMailHandler = (options: {
-  name: string;
-  email: string;
-  message?: string;
-}) => {
-  //using the nodemailer library to send emails
-  const nodemailer = require("nodemailer");
-
-  //creating transporter object
-  const transporter = nodemailer.createTransport({
-    host: process.env.EMAIL_HOST,
-    port: process.env.EMAIL_PORT,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
-
-  //send email to customer with nodemailer
-  transporter.sendMail({
-    from: '"Vidal Team" <vidalteamcontact@gmail.com>', // sender address
-    to: `${options.email}`, // list of receivers
-    subject: `A Message From the Vidal Team`, // Subject line
-    text: `Thanks for reaching out ${options.name}, we got your message and will respond as soon as we can.`,
-  });
-
-  //send email with client info to self
-  transporter.sendMail({
-    from: `"${options.name}" <${options.email}>`,
-    to: "vidalteamcontact@gmail.com",
-    subject: `A message from your contact form`,
-    text: `${options.message}`,
-  });
-};
