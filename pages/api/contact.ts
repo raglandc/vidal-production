@@ -18,14 +18,14 @@ export default function contactHandler(
     to: `${email}`,
     from: `vidalteamcontact@gmail.com`,
     subject: `Thank you for reaching out ${name}`,
-    text: `We got your message!\n We will respond shortly to the email you gave us.`,
+    text: `We got your message!\nWe will respond shortly to the email you gave us.`,
   };
 
   const mssgToVidal = {
     to: `vidalteamcontact@gmail.com`,
     from: `vidalteamcontact@gmail.com`,
     subject: `Email from ${name}`,
-    text: `${message}\n from: ${email}`,
+    text: `${message}\nfrom: ${email}`,
   };
 
   //email to user
