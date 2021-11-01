@@ -38,7 +38,7 @@ const ThreeDSection = () => {
           Design
         </animated.h3>
         <animated.h3 style={developeSpring} className={styles.headers}>
-          Develope
+          Develop
         </animated.h3>
       </div>
     </div>
