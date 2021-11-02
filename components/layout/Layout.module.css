@@ -1,6 +1,7 @@
 .main {
   overflow: hidden;
-  min-height: max-content;
+  /* trying to solve bug on ipad display of website. Scroll is entire extra page on all pages*/
+  max-height: max-content;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

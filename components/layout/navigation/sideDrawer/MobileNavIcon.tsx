@@ -25,6 +25,7 @@ const MobileNavIcon = () => {
       <div className={styles.menu} onClick={() => dispatch(setMenuStatus())}>
         <div className={styles.menuSlash}></div>
         <div
+          aria-expanded={!status}
           className={!status ? styles.menuSlash : styles.menuSlashActive_middle}
         ></div>
         <div className={styles.menuSlash}></div>
