@@ -1,7 +1,5 @@
 This is a website I developed with NextJS (written in typescript).
 
-Visitors are welcome to opening the repository in personal development server.
-
 ## Getting Started
 
 First, run the development server:
