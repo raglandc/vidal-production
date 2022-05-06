@@ -19,7 +19,7 @@
   color: #3b82f6;
 }
 
-.listItem:hover {
+.listItem:hover > a {
   color: #3b82f6;
   transition: background-color 162ms ease-out;
 }
