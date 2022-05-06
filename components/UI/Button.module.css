@@ -9,6 +9,7 @@
   border: none;
   border-radius: 6.18px;
   font-size: 1.618rem;
+  color: #fff;
   background-color: #2563eb;
   opacity: 1;
   transition: opacity 1618ms ease-in;
@@ -43,11 +44,7 @@
   transition: all 100ms ease-out;
 }
 
-.solidLink {
-  color: #fff;
-}
-
-.hollowLink:hover {
+.hollow:hover > a {
   color: #fff;
 }
 

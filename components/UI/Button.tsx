@@ -17,15 +17,11 @@ const Button = (props: ButtonType) => {
   const isVisible = !!entry?.isIntersecting;
 
   const buttonStyle = props.style === "solid" ? styles.solid : styles.hollow;
-  const buttonLinkStyle =
-    props.style === "solid" ? styles.solidLink : styles.hollowLink;
 
   return (
     <button ref={ref} className={`${isVisible ? buttonStyle : styles.start}`}>
       <Link href={props.link}>
-        <a className={`${isVisible ? buttonLinkStyle : styles.start}`}>
-          {props.title}
-        </a>
+        <a>{props.title}</a>
       </Link>
     </button>
   );
