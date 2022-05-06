@@ -40,7 +40,7 @@
   background-color: #111;
   box-shadow: 0rem 0.2rem 0.886rem #6b7280;
   cursor: pointer;
-  color: #fff;
+  color: #fff !important;
   border: none;
   transition: all 100ms ease-out;
 }
