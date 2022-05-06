@@ -26,7 +26,7 @@ const Footer = () => {
           </a>
         </Link>
       </div>
-      <p className={styles.copy}>&copy; 2021 Vidal </p>
+      <p className={styles.copy}>&copy; 2022 Vidal </p>
     </footer>
   );
 };
