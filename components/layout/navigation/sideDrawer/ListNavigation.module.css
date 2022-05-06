@@ -19,6 +19,11 @@
   color: #3b82f6;
 }
 
+.listItem:hover > a {
+  color: #3b82f6;
+  transition: background-color 162ms ease-out;
+}
+
 .icon {
   margin: 1rem;
 }
